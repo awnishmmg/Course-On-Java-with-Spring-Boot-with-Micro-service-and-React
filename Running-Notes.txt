@@ -1,0 +1,1333 @@
+What is Technology Java Full Stack :-
+===================================
+Full Stack = Stack with Front End and Backend Together.
+Front End  = UI wala part (html,css,Bootstrap/tailwind+ Javascript+Jquery)
+Back End = Server Side Environment + Database 
+										|
+								1. Relational 			2. Non-Relational
+														(2d)                   (3d)
+									-oracle              mongodb                Neo4J
+									-Mysql               dynamodb
+									PostgresSQL			 firebase/Firestore
+									-Mariadb             Hbase/B Hive/Apache Pig
+									Infinix DB           memcache
+									DB2                  Redis
+									...                  couchdb
+														 cassandra
+														 Rabbit MQT.
+														 HDFS (Hadoop)
+Data Engineering and BIG Data (Hadoop)															
+Scala (Brother of Java)
+
+1. Scalability 
+2. Byte code Compatibility 
+
+Note : Java is it only for Enterprise.
+maintaince of Java is very expensive.
+
+Server Side Environment : 
+	1. Server Plateform (Ngnix,Apache,IIS(microsoft))
+						Open Apache 
+						Apache Tomcat.
+	2. Java Runtime Plateform/Engine/Environment (JRE)
+
+
+java is a technology 
+if you want work with java you need a package or collection of some tools that java requires.
+1. Javac : javacompiler 
+2. JIT : just in Time Compiler 
+3. JVM : Java Virtual Machine 
+4. JNK : Java Native Kit ---> it most similar to C/C++ Environment (Internal Architecture)
+5. JRE :  Just Runtime Environment
+Package or collection of All Above Tools are called JDK (Java Development Kit)
+
+Software Engineering Terms Java :-
+================================
+Java Provides support for Backend we already Know but Java also provide support from front End as well
+
+2 Types of Front End :-
+1. GUI : awt or swing
+2. WEB : jsp,servlet (HTML)
+3. Mobile : 
+				1. Android(xml)
+				2. JMvf (J2ME)
+4. CLI : Black and white
+
+								SGML(standard General Markup langauage)
+									    |
+      HTML ----------------------------xml---------------------------------YML
+	  web Application                Android                             cloud Appliction
+	   
+infrastructure under IT Technology :-
+1.  console based Application  /CLI/CUI
+		Unix/Linux/BIOS/CMD/msdos/git 
+		Railway General Reservation System 
+	
+2. window Based Application /GUI 
+		 This will have Windows (max,min,close)
+	     (Stand Alone Software)
+		 1. installable 
+		 2. non installable
+		 
+		 Eg mspaint,VLC Media Player, MS Office.
+
+3. Web Based Application (Web App): These requires internet and Browser and need to be installed 
+				can be accessed from anywhere.
+		gmail,youtube,facebook,amazon,flipkart,instagram,.....tiktok.
+			
+
+   Two Types of Web Applications/websites
+   1. web Site : shtml : static html content static (web 1.0) = html+css 
+                 dhtml : interactive or Dynamic web static pages  = html + css + Javascript.
+				 
+				 static 
+   2. web App 
+				-Dynamic 
+				-Database 
+				-dynamic web
+				
+				Agar n of user ko n type of information at a same time : dynamic.
+				
+	we want make html content dynamic 
+	index.html --> index.html.jsp 
+		<h1> Hello Welcome <%=ServerController.getName['user_name'];%> </h1>
+							|
+							scriple ---> servlet Tag
+				
+		Full Stack with Java :-
+=========================================
+1. J2SE (Java 2 Standard Edition) : core Java 
+2. J2EE (Java 2 Enterprise Edition) : Advance Java
+3. J2ME (Java 2 Micro Edition for Mobile)
+		Keypad Wala Phone -> games -> Application
+		Oracle is has officially stopped support to J2ME
+		
+Question Android becomes to which category 
+Android (Linux) -> XML + J2SE 
+
+Complete Java :- (11 to 12 Months)
+======================================
+1. Core Java Fundamentals 
+2. OOPS 
+3. Multithreading and concurrency 
+4. Generics and Collection Frameworks 
+--5. JVM Architecture
+
+--6. Design Pattern of Java (23) - GOF 
+--7. AWT/SWING 
+8. Exceptional Handling 
+
+1. JDBC [x]
+2. SERVLET [x]
+3. jsp [x] : One crud Application
+4. Hibarnet 
+5. Spring core 
+6. Spring MVC 
+7. Spring Etity Framework 
+9. Spring Boot  [x] : Rest API 
+10. Spring Boot with Microservices [x] : Rest API 
+11. Spring with JWF 
+12. Spring with JPA 
+
+13. Maven [x]
+14. Log4J 
+15. Struts Framework 
+17. JUnit 
+18. Java with Selenium
+
+Stack of Java:-
+React, Java with Sprint Boot and Micro services 
+
+Java Run -> JDK 
+1. CJDK : closed Java Development Kit (Oracle) 
+2. OJDK : Open JDK (open source) | LTS
+https://learn.microsoft.com/en-us/java/openjdk/download
+
+
+Name : Awnish Kumar
+Mobile No : 8299502081
+
+14-July-2025
+
+Introduction to Java :-
+=======================
+java : HLL,simple, General Purpose, Server Side, compiled, Object Oriented, Plateform Indepent
+and scalable Programming Langauge.
+
+-HLL : High Level Langauge
+	   1. Human readable code.
+	   2. English most spoken langauge that is HLL is mostly written in HLL.
+	   3. Adding comments.
+	   
+simple :- Java has neutral architecture. that makes it a simple langauge.
+		 (Must learn JVM Architecture)
+General Purpose : -  Java Java every where but no code run.
+				learnig,for dsa,cp,web based app,console,enterprise,cloud,micro-processing,embedded,
+				ml and ai.(spring ai and using Jython flavour(python))
+Server Side : Java (servlet) it can be best at server side application.
+ 
+OOPs : Java support all fundamental concept like 
+	   class, object, Data Encapsulation,Abstraction,Polymorphism,inheritance,Data Hiding..
+-Note : Java is fully not Object Oriented.
+-They are not fully Object Oriented 
+-Smalltalk is purely object Oriented Programming Langauage.
+
+why ?
+1. multiple Interheritance does not support.
+2. Hybrid does not support.
+3. Java has class and Object Reserved for everything but not for primitive data.
+	int x=10 
+	Integer x = new Integer(); Primitive data type class and object.
+	wrapper class implement -> primitive data implement 
+	Integer x = new Integer(); 
+
+Plateform Indepent : it support wora (write once and run anywhere)
+byte code --> Plateform Indepent 
+Note : Plateform (Os,Linux,MacOs) must have JVM (plateform dependent)
+scalable :- it is must be scalable for N of Users and must support, concurrency.
+
+
+working with Java :-
+=====================
+1. install jdk (open JDK)
+2. set the path 
+3. How to verify the path of Java 
+ java --version 
+ javac --version 
+ 
+ where java 
+ where javac 
+ 
+ Important Path in Java :-
+ 1. javapath : it is where java and javac is installed.
+ 2. classpath : when java cannot class/pre-defined or user defined class specified.
+ 3. javahome -- Root Directory Java.
+	1. Maven requires this Path.
+	
+ How to compile :-
+ javac filename.java 
+ 
+ How to Run :-
+ java classname 
+ 
+ HOw : Please Perform Postmortem of the Java First Program 
+ public static void main(){
+ 
+ }
+ 
+ How to take input :-
+ ==================
+ Scanner Class  to take input 
+ import java.util.Scanner;
+ 
+ Scanner sc = new Scanner();
+					|
+					constructor (parameterised) : std input
+					
+
+  I/O 
+  standard Input : System.in 
+  Standard out : System.out 
+  
+Scanner sc = new Scanner(System.in);
+1. String 
+	1. space string 
+		sc.nextLine();
+	2. without space string 
+	   sc.next()
+	   
+2. int 
+	sc.nextInt()
+2. float 
+	sc.nextFloat()
+3. double 
+	sc.nextDouble()
+4. Boolean 
+	sc.nextBoolean()
+5. char 
+	sc.next().charAt(0)
+	
+	 or 
+	 
+	String word = sc.next();
+	System.out.println(word[0])
+	
+15-07-2025:-
+=============
+Postmortem of class and Object, constructor,Stack and Heap,Garbage collector
+or getter and setter, instiantiation and intialisation 
+
+int x =10 //intialisation
+A x = new A() //instantition.
+
+17-07-2025:-
+=============
+using import in Java :-
+========================
+fully qualified classname :- we know that, java follows the standard of class and object 
+
+class p4{
+	public static void main(String[] args){
+		
+		String output = "working with Java";
+		System.out.println(output);
+	}
+	
+}
+
+in the above program, String and System are classname but the beautiful thing is 
+we neither have imported java.lang.String or java.lang.System;
+then also our program is running fine.
+
+class p4{
+	
+	
+	public static void main(java.lang.String[] args){
+		
+		java.lang.String output = "working with Java";
+		System.out.println(output);
+	}
+	
+}
+java : folder 
+lang : subfolder 
+
+jdk 
+  |
+  java
+	|lang 
+	  |String
+
+where is the java packages stored :-
+java/lib/src.zip
+Note : you should never ever use-> wild card implicit import 
+
+1. size 
+2. ambiguity
+
+Eg of the Ambiguity:-
+
+import java.sbibank.*;
+import java.axisbank.*;
+
+Loan l = new Loan()
+Account ac = new Account()
+Transfer ts = new Transfer(5000);
+jshell : java 9 version:-
+Homework : you have to study jshell from youtube.com 
+
+Java version:-
+=================
+java            legacy        SE Version (oracle standards/technical name/industrial name)  
+1.1             1.1           1.1
+1.2             1.2           1.2
+1.3             1.3           1.3
+1.4             1.4           1.4
+---------------Java Extended Version-----
+1.5             1.5           5.x
+1.6             1.6           6.x
+1.7             1.7           7.x 
+1.8             1.8           8.x 
+---------------Modern Version --------
+9.x             9.x           9.x
+...
+---------------LTS Version ------------
+17.x           17.x           17.x (LTS : long Term Support /Stable Release)
+---------------current Version -------------
+21.x           21.x           21.x (current)
+
+Langauge Fundamentals:-
+======================
+Data Types : 
+	1. primitive data type 
+			1. Integer (capacity)
+				1. byte 
+				2. short 
+				3. long 
+				4. int
+			2. float 
+			3. character 
+				char 
+			4. boolean
+	2. non primitive 
+		
+D:\Training\spi\Java-Technology\class-work\lang-fundamentals>java p1
+===========Memory Range of Byte===============
+-128
+127
+===========Memory Range of Short===============
+-32768
+32767
+===========Memory Range of Integer===============
+-2147483648
+2147483647
+===========Memory Range of Long===============
+-9223372036854775808
+9223372036854775807
+
+char :- 
+=======
+char data type is a standard of ANSI. so that each symbol of keyboard can be represent 
+in some Integer value.
+1. Number system 
+	Int -> Binary 
+	A -> Binary 
+	? -> Binary
+	_ -> Binary
+	# -> Binary
+	
+	A --------------> Binary ---> ❌ very complex 
+	A --------> Integer (65) ----------> Binary [✔️] easy 
+	
+	
+	ascii range - null (0) ---- 127 (signed/unsigned + and - )=> 256 (-128)
+	0 to 255
+	
+	Size : 1 Byte 
+	
+Java -> Legacy version intially ->ascii -> char 
+after with improved version, Java include many, other encoding of character.
+windows : ISO 8859,
+Unicode (8,16,32....)
+char : 1 Byte Extended 2 Byte 2^16 (65536) {0,65535}
+Character.MAX_SIZE :65535
+Character.MIN_SIZE :0 
+
+if you want to cast the Charater in Int we go for cast (<type>) operator 
+int ascii = (int)'A' => 65 
+intially when java was launched in 1995, it was not that popular, but in late 20's after 3 to 4 years ahead java was adopted by almost 85% European market and america.
+native langauge encoding was supported in Java.
+
+Java => English 
+Java => Hindi 
+Java => Chinese 
+Java => arabic
+...
+...
+Java alos supports concept of I18n (MULTI-LINGUAL)
+I[nternationalizatio]n.
+
+working with floating datatypes :-
+================================
+1. float -> 4 Byte (7)
+2. double -> 8 Byte (16)
+Boolean : 1 Bit true,false 
+
+working with String Data Type:-
+===============================
+1. String is a continous character sequence with '\0' null pointer sitting at the last.
+2. String data structure in java is immutable 
+3. String class is part of java.lang package with full qualified name 
+  java.lang.String 
+it is globally available.
+4. String is not directly iterable/traverse (you can loop it.) but can be iterable 
+			if used as -> character array.
+			-traditional loop ,for,while,dowhile
+			-foreach loop -> foreach
+
+what is immutable and mutable ?
+mutable : changes allowed 
+immutable : changes not allowed.
+
+
+String : delimeter : ""
+
+How to intialisation of string :-
+String indentifier_name  = "Hello";
+
+How to instantiate of string :-
+String indentifier_name  = new String("Hello") //Hello 
+
+Mis concepts:-
+===============
+we cannot check name == "Awnish" this is invalid.
+.equals() => case sensitive 
+	"hello" == "Hello" : false
+.equalsIgnoreCase() => case In-sensitive
+	"hello" == "Hello" : true
+	
+toLowerCase() source and target ---> lowercase 
+toUpperCase() source and target ----> uppercase
+
+Leet-Code :-
+========
+1. string 
+2. hashmaps 
+	Enter the csv(,) : 1,1,1,1,2,2,2,2,3,3,4,4,4
+	hashmap => {1=4,2=4,3=2,4=3}
+	
+Operators :-
+==============
+2 [+] 2 = 4 
+2 [*] 2 = 4
+
+2 [+] 3 = 5
+2 [*] 3 = 6
+
+x <op> y = z 
+where op is operator 
+x,y are operand 
+z = result after evaulating the expression 
+
+Operators are the special symbols which defined the Qty relationship b/w 2 operands.
+which upon evalaution gives the desired result.
+
+Operators Types :-
+1. unary Operator (no of operand = 1 either x or either y)
+	eg :  x=5  x is a +ve no 
+          x>0 
+		(unary) of 5 => -5 x is a -ve no 
+						x < 0 
+		1. ++ or -- These are modify operator. 
+		pre increment/decrement 
+		2. not operator/inverse operator.
+		3. cast operator 
+		 (int)'A' => char to int 
+		4. new Operator : class -> intiate ->logical entity convert physical 
+        5. & operator 
+        6. sizeof 
+		7. delete 
+		
+2. Binary Operator (no of operands = 2 x and y)
+3. Ternary Operator (no of operands = 3 x,y,a will be involved)
+
+General/Fundamental Operators of Java :-
+=============================
+General Operator are operator are those which are common in every programming langauge.
+
+Trick : Ar re con log special bit assign karengye
+Arthmetic (B)
+	+
+	-
+	*
+	/
+	%
+	
+Relational (B)
+		1. Equality = (==) x==y 
+		2. Inequality x!=y 
+			 1. strict enquality 
+				 x > y : strict greater than 
+     		 2. strict less than 
+				 x < y 
+		   Slack Enqaulity 
+			 greater or equal to 
+			   x >= y  
+			   x > y or x = y
+			   x > y || x == y
+			 less or equal to 
+			 x < y or x == y 
+			 x < y || x == y 
+				 
+compound Relation 
+1. mendatory (AND)
+2. optional (OR)
+
+Conditional (T)
+Logical (B)
+ 1. AND && (Love Marriage with Everthing Settled)
+		
+	1 and 1 = 1
+	0 and 1 = 0
+	1 and 0 = 0 
+	0 and 0 = 0
+	
+		
+		
+ 2. OR  || (Love Marriage with Kalesh + Neela Drum)
+	1 OR 1 = 1 
+	1 OR 0 = 1
+	0 OR 1 = 1
+	0 OR 0 = 0
+	
+ 3. NOt !
+	
+	Yes ---> No 
+	No ---> Yes 
+	True ! => False 
+	False ! => True
+
+Special (U,B)
+Bitwise (B)
+assigment Operator :(B)
+	 x = x+y  x+=5 
+	
+	 x = x-y => x-=y
+	 x = x/y => x/=y
+	 x = x*y => x*=y
+	 x = x%y => x%=y
+	 x = x|y => x|=y 
+	 
+
+
+Conditional :- is a short form of if and else and used in decision making.
+and to evaluate the expression in of condition.
+It generally required 3 operands also called as ternary operators 
+
+syntax :-
+
+  result = <expression> ? True : False;
+  Associativity and Precedence Order?
+  
+Meaning :-
+====================================
+x = if(x>0)return True else return false 
+
+Bitwise :-
+============
+1. Bitwise OR |
+2. Bitwise And &
+3. Bitwise Not ~
+4. <<< left shift (<<)
+5. >>> Right shift (>>)
+Note : third left shift or third right shift is taken when (signed or unsigned)
+6. Exclusive or (XOR) ^
+	trick :- 
+	Abba Salam
+	
+	a=a^b 
+	b=a^b 
+	a=a^b
+	
+	
+	2 and 3
+	
+0010 => 2
+0011 => 3
+
+Even Parity 
+Odd Parity
+
+Xor Operation ODD Parity 1 
+Xor Table:-
+====================
+0 0 (E) => 0
+0 1 (O) => 1
+1 0 (O) => 1
+1 1 (E) => 0
+
+0010 => 2(a)
+0011 => 3(b)
+=====
+0001 => a 1st Step
+0011 => b
+=====
+0010 => b 2nd Step 
+
+0001 => a 
+0010 => b => 2
+=======
+0011 => a => 3
+
+flow controls :-
+==============
+Normal Execution of the compiler for a source code 
+1 top to Bottom 
+2. Left to Right 
+
+controlling the Normal exection of the Program 
+1. Horizontal flow control :- 
+   execution of the Program as inline Expression.
+   Normal Execution :
+   left to Right 
+   Using Concept of Associativity and Precedence
+   concept of Operator is nothing controlling the Horizontal execution flow.
+   
+2. vertical flow control :-
+	we know that, the execution of the program is from top to bottom
+	hence if we have to control this normal execution.
+	then we can say that we using vertical flow controls.
+	1. controlls the flow conditionally
+	2. reverse the direction of control 
+			1. single time 
+			2. multiple times.
+			
+	
+	controlls the flow conditionally:-
+	===================================
+	1. Sequential Control 
+	   switch control 
+	2. conditional Control 
+	3. jump statement 
+		 1. break through
+			(goto/return)
+		 2. break out (break and continue)
+		 
+		
+
+	switch control :-
+	==================
+	switch control is a Sequential control statement which is used to execute the statement
+	on the basis of the, cases.
+	
+	syntax:-
+	switch(value){
+		case <case_1>:
+			statement 1
+			.....
+			statement n
+		break;
+		
+		case <case_1>:
+			statement 1
+			.....
+			statement n
+		break;
+		
+		case <case_1>:
+			statement 1
+			.....
+			statement n
+		break;
+		
+		default:
+			statement 1
+			.....
+			statement n
+		break; <both|mendatory|optional>
+		
+	}
+	
+value : Evaluated 
+=> Expression : it is should be able to be resolved.
+=> condition :it is should be able to be resolved.
+   x%2==0
+   
+   Rule : the condition or expression written inside, switch must be valid and syntactically 
+   correct.
+   Rule : Door of switch are always open if case found it will execute that case and if not 
+   default will executed if not, nothing will be execute but switch block will execute.
+   switch is some what like else block.
+  
+
+	what is chaining effect in Switch:-
+	==============================
+	if there is no break in the cases, then all the cases after the matched case will 
+    executing one after the another.
+    this effecting is called as chaining effect in switch.	
+
+	concept of un-reachable code:-
+	==============================
+	knowingly or unknowgingly sometime we may use return statement, in a such that 
+	the execution of the block is stopped immediatly.
+	due to this Program generated a zone called zone of no return or void zone
+	or Null zone or Unreachable code. 
+	
+	Important Points about the switch case 
+	1. break is not mendatory in switch  
+	2. break may be required or may not required it depends upon case to case.
+	   and sample space.
+		-one to one 
+	    -one to many 
+	3. default does not a fixed location 
+	4. break is mendatory in default, when it is not at last.
+	5. break is not mendatory in default, when it is located at the last.
+	6. chaining effect is break through condition of switch also termed as domino effect,
+	7, we can combine multiple cases in single condition.
+	
+	   
+	working with if and else :- 
+	============================
+	if: it is decision control block, when condition is true it will execute and if condition 
+	if will not execute 
+	syntax :-
+	if(<condition>){
+		statement 1;
+		...
+		...
+		statement n;
+	}
+	 
+    Note : if the statement is 1 then {} is optional.
+	       if the statement is more than 1 then  we must must used {}
+	
+	-else: block it is complementary of condition of if block,
+	-else will only execute when if is falsy.
+	-else cannot be written if.
+	
+	Write a Program to, find Prime Number from 1 to 100:-
+	without using loops,recursion or inbuilt functions.
+	No Any Method or Trick Allowed 
+	only if-else 
+	
+    else if Ladder :-
+	================
+	if you want to combine multipe condition we can use else if ladder to combine 
+	mutiple condition in a single use case.
+	that is else if is called Sugar form of if-else.
+	
+	else if alternative switch.
+	else if ladder slower when compared to switch.
+	
+	why ?
+	because in switch we directy jump to condition 
+	rather, other condition skip
+	else ladder each condition check start from if.
+	
+	Actual use case of else if ladder used probability distribution.
+	Event E and there N of sample space 
+	
+	f(x) = if-else-{else-if}^N-2
+	if : All Best case 
+	else : complementary of if 
+	
+	(else-if)^N-2 
+	 ------------   ======>1st Part Other Remaining Best cases.
+	      2
+	(else-if)^N-2 
+	 ------------   ======>2nd Part Other Remaining complementary cases.
+	      2
+
+	Q1 : +ve and +ve  -> if 
+	Q2 : +ve and -ve  -> 1st of else-if 
+	Q4 : -ve and +ve  -> 2nd of else-if
+	Q3 : -ve and -ve  -> else 
+	
+	Looping statements or Iterative Statement:-
+	==========================================
+	we have 2 ways 
+	1. using looping constructs.
+	2. Recursion 
+	
+	Note : in cronological order, Recursion came first then loops were introduced.
+	there are 2 Types loops 
+	1. Infinite Loops :-
+		1. while(true)
+		2. for(;;)
+		
+		1. Infinite loops are those loops, which go on executing infinitly.
+		2. because to donot any terminating condition.
+		3. there scope never destroy thats' they keep on executing.
+		
+		
+		Importance of infinite loops:-
+		1. in IOT 
+		2. sensor state management
+		3. statefull and stateless
+		4. Request and Response Cycle Infinite loops
+		
+		Note : As per maths, in order to make anything cyclic there are 
+		minimum condition (n=3)
+		
+	2. finite loops :-
+		Loops with a specified conditions 
+		1. lower bound or starting condition 
+		2. upper bound or terminating condition 
+		3. updation.
+		
+		
+		How to convert any Infinte loop to finite loop:-
+		================================================
+		1. start with infite loop 
+			while(true){
+			
+			}
+			for(;;){
+				
+			}
+		
+		2. Add the limit where you want to terminate
+		   How to terminate 
+		   Add the Termination Block ?
+		   if(counter == last_limit){
+				break;
+		   }
+		
+		3. update the counter with some value so that it could reach last limit.
+		
+		
+		
+		How to convert any loops from infinite to syntactical finite loops
+		=================================================================
+		for loop, and while loop including do-while they have predefined syntax.
+		1. move the starting condition to intialisation Block.
+		2. Take the complement (~) of the Termination Block condition
+			counter !=10 
+		3. move the complement to conditional Block
+		4. move the updation to updation Block.
+		
+		
+	 finite loops classification:-
+	 ================================
+	 1. Entry control loops :-
+			These are the loops in which condition is checked before,hand 
+			before you entry the body the loops 
+			1. movie ticket 
+			2. circus.
+			3. Biometric entries
+			
+			1. while loops 
+			2. for loops 
+			
+	 2. Exit Control loops :- these are the loops which allow the first entry, as soon as you exit,
+     the condition is checked.
+           3. do-while.	 
+		   
+		    Eg:- Parking system, exit pass for vehicle servicing,shopping complex.
+			Bgv.(Background verification by companies for emp.)
+		
+		
+	syntax of for:-
+	==========
+	for(<intialise>;<test condition>;<updation at EOB>){
+			statement 1
+			statement 2
+			...
+			...
+			statement n
+	}
+	
+	syntax of while 
+	=================
+	initialisation 
+    int i=0;
+    while(<test-condition>){
+		statement-1
+		statement-2
+		...
+		statement-n
+		
+		<updation>
+	}	
+		
+	 3. Odd loops :- 
+	 ==============
+	 generally, every program it can be infinite or it may run for finite times already defined 
+	 in the test condition.
+	 so one way to run the code according to need to the user can be achieve by 
+	 odd loops:-
+	 
+	 eg: suppose you are playing, candy crush and you loose the games, you asked 
+	 again 
+	 1. restart or are you want to continue? 
+	 2. exit
+	 
+	 such type of requirement achieved using Odd Loops 
+	 
+	 concept behind odd loops:-
+	 1. start with inifinite loops.
+	 2. Add the termination condition which can dynamically changed at runtime
+	 if the condition satisy it will exit.
+	 
+	 it can be achieved using 
+	 1. for 
+	 2. while 
+	 3. do-while (recommended)
+	 
+	 Odd Loops are used to build the menu programs.
+	 Eg:-
+	 
+	 Q:- wap program in Java using OOPS.
+	 ==================================
+	 ***** Welcome to SPI BANK  *********
+	 
+	 1. To See Account Info 
+	 2. To see Balance 
+	 3. To deposit
+	 4. to withdraw
+	 5. to Transfer
+	 6. exit 
+	 
+	 Banking Level 0 
+	 1  Using OOPS 
+	 2. collection Framework 
+	 3. JDBC 
+	 4. As a Api consume.
+	 
+OOPS:-
+=======
+OOPS : is Programming Paradigm/Methodology/Technique/Mechanism to develope software Application.
+OOPS : Object oriented Programming system.
+OOPL : Object Oriented Programming Langauge :- Every langauge that supports oops is said to be OOPL.
+
+What is Approach Software Development:-
+1. it follows SDLC.
+
+Every SDLC Model (waterfall,Rapid,Spiral....,Agile) gives a freedom, to follow 3 Main uses 
+
+1. Presentation Logic 
+2. Design Logic 
+3. Bussiness Logic.
+
+Every developer has his own style of writing code.
+xxxxxxxxxxxxxxxxxxxxx=2
+yyyyyyyyyyyyyyyyyyyyyy=3
+zzzzzzzzzzzzzzzzzzzzzz=xxxxxxxxxxxxxxxxxxxxx+yyyyyyyyyyyyyyyyyyyyyy
+
+Standard Programming Practise 
+1. pseudo logic 
+2. procedureal programming 
+	1.polythic programming.
+	2.modular programming.
+3. object oriented
+4. Reusable component of OOPS (Gang of 4)/ Design Pattern 
+	1. creational
+	2. behavioural
+	3. structure.
+	
+	Total 23 Design Pattern:-
+	toolkit : No Application would require solution other than these design pattern.
+	
+5. Solid Principals.
+	 They are: 
+	 Single Responsibility Principle,
+	 Open/Closed Principle,
+	 Liskov Substitution Principle, 
+	 Interface Segregation Principle, and 
+	 Dependency Injection/Inversion Principle
+
+
+oops : Revolves around 4 pillars
+1. Encapsulation 
+2. Data Abstraction/Data Hiding.
+3. Inheritance 
+4. Polymorphism
+
+why oops:-
+1. Each pillars has its own advantage.
+
+Advantage :
+1. Encapsulation : Single Entity that wraps the data memeber and member function all to gether
+	with thier access rule.
+	access rule : Access Modifiers : default,public,private,protected.
+
+2. Data Abstraction/Data Hiding. : Security and complex Implementation are bifercated or abstracted.
+
+3. Inheritance : All the features are derived from parent to child.
+4. Polymorphism :(Morphology)
+	-Entity Same and Forms different.
+	-Maa/Female is Best of Example Polymorphism.
+	
+5. Approach Bottom to Top.
+
+
+what class :-
+===========
+1. class is a Logical Entity 
+or class is a Blueprint/mould/template of a Object(physical Entity or Real Entity)
+or class is a collection of property/states/attributes and behaviours/actions
+or class is a encapsulated form of data memeber and memeber function.
+or class is a defines signature of Object.
+
+2. Object is physical Entity/Real Existing thing
+or Object is a instance of a class.
+or Object is implementation of the class.
+or Object is Reference to the class that helps to access the data memeber and member functions/
+
+syntax:-
+======
+<Access Modifier default|public|procted|private> class <Class_Name>{
+	//Data Memeber
+	
+	//Member function.
+}
+
+
+Object :- 
+syntax :-
+
+Propotype|Return Type <Object_name> = new <constructor>();
+
+Object Types :-
+1. Anonymous Object
+	1. it does not any Name.
+	2. it is to be used as soon as created otherwise you won't be able to acccess because you 
+	  you would loosed its memory(reference)
+	3. this is to be for one time.
+	4. it gets memory allocation at Heap.
+	
+	syntax :-
+	
+	1. with no parameter :-
+	   new constructor()
+	
+	2. with parameter 
+	   new constructor(param1,param2,param3...)
+	
+	How to read/write using Anonymous object 
+	========================================
+	 Anonymous object must be as soon they are created.
+	 for property:-
+	 ============
+	
+	(new constructor()).property 
+	
+	 for method/function:-
+	 ============
+	 (new constructor()).method()
+	
+	Note : Access depends on Access Modifiers.
+	===============================================================
+	default : Access Allowed
+	public : Access Allowed 
+	private : Access not Allowed 
+	protected : by default not allowed but if inherited allowed.
+	
+2. Reference Object 
+	 1. it a reference variable that holds the copy of the class Signature which is reference
+	 to a Object Allocated in Heap.
+	 2. Reference Object is a Reference Variable that holds the real Object at Heap and itself 
+	  allocated to stack.
+	  
+	 
+	syntax :-
+	
+	1. with no parameter :-
+	   classname reference_name  = new constructor()
+	
+	2. with parameter 
+	   classname reference_name = new constructor(param1,param2,param3...)
+	
+	How to read/write using Reference object 
+	========================================
+	 Reference object can be used any no of times once they are created.
+	 
+	 for property:-
+	 ============
+	 
+	 classname reference_name  = new constructor();
+	 reference_name.property
+	
+	 for method/function:-
+	 ============
+	 classname reference_name  = new constructor();
+	 reference_name.property
+	 
+	 reference_name.method()
+	
+	Note : Access depends on Access Modifiers.
+	===============================================================
+	default : Access Allowed
+	public : Access Allowed 
+	private : Access not Allowed 
+	protected : by default not allowed but if inherited allowed.
+
+
+	Importance of new keyword:-
+	============================
+	
+	
+	How memory is allocated when new keyword is used:-
+	======================================================
+	
+	
+	
+	
+
+ 
+
+
+
+
+
+
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
