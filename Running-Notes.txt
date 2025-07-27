@@ -1111,6 +1111,23 @@ Object Types :-
 	======================================================
 	
 	
+	Concept of Method Chaining:-
+	========================
+	In method chaining we can chain or combine multiple method within the single object reference.
+	
+	Before method chaining:-
+   ============================
+	Student st = new Student();
+	
+	st.setRollno(1001);
+	st.setName("Awnish");
+	st.setClass("Btech");
+	st.setBranch("CSE");
+	
+	Before method chaining:-
+   ============================
+   
+	st.setRollno(1001).setName("Awnish").setClass("Btech").setBranch("CSE");
 	
 	
 

@@ -1,0 +1,142 @@
+We have to start our session in React JS:-
+React :- it is stack of MERN 
+
+M : mongodb 
+E : Express JS 
+R : React Js 
+N : Node Js 
+
+1. All these are Technology of Javascript.
+2. Pre-requistic you must little bit javascript.
+3. html and css is Must.
+
+in Javascript :-
+1. Basic 
+	1. loops,decision loops, let const,var 
+	2. functions, arrow functions, Events
+	3. dom manupulations 
+	3. callback, Higher order functions,Anonymous functions 
+	4. local storage, scope resolutions 
+	5. promises, async,await and fetch api.
+	
+	1. https://developer.mozilla.org/en-US/docs/Web/JavaScript (Best| Time constraint)
+	2. https://javascript.info (straight to the point)
+	
+
+React JS : Multiple Tech stack.
+React JS : Front end Framework (Js library facebook(Meta))
+
+Backend : Python + Django/Fask 
+Front End : React Js 
+
+Java : Backend(java with Spring Boot,Microservice Rest Api)
+Front End : React Js 
+
+Framework other then React Js :-
+===============================
+Angular/React/Vuejs/Svelet Js/Alpine JS/Angular Js.
+
+Important React about React:-
+1. React is front end framework (library.)
+2. SPA based Application (SPA : Single Page Application)
+   Eg : MPA : multi page applicaiton 
+   
+   Multiple pages -> single index.html -> React use for its internal purpose.
+   
+   in case java with jsp:-
+   About.jsp 
+   gallery.jsp 
+   contact.jsp
+   home.jsp
+   
+   Application heavy -> front Architecture : MPA Based (Multi page application)
+   Multiple Pages/ Load Time/Performance effect.
+   
+   In React we have single index.html 
+   All the Views as written as logic in form class or functions.
+   -About.js -> class or functions
+   -gallery.js -> class or functions
+   -contact.js -> class or functions
+   -home.js  -> class or functions
+    
+	The Application Logic which you write in Js in form class and functions 
+	is only component.
+	
+	consider we want make a website 
+	1. gallery.html
+	2. home.html
+    3. About.html
+	4. contact.html
+	5. service.html
+	
+	The core of the React is component based Architecture.
+	Now since there no page, hence memory will also will not be consumed.
+	
+3. React works on the basis of 2 concepts.
+   1. JSX 
+   2. Virtual DOM.
+   
+  what is JSX ?
+  Jsx : Javascript + XML  = React Code 
+  XML : Extensible Markup langauge somehting like html.
+  
+  html works in readymade tags 
+  xml works on the basis custom or user defined.
+  
+  DOM :- 
+  Javascript object based : Ready Made Object
+  Java object oriented : Custom Object.
+  
+  Javascript (Vanilla Js):-
+  ============================
+  2 main Object 
+  1. BOM : Browser Object Model 
+		 window.alert()
+		 window.confirm()
+		 window.prompt()
+		 ...
+		 ...
+  2. DOM : Document Object Model 
+		1. Tags,forms Elements,urls...
+		
+		<!doctype html>
+		<html>
+			<head>
+			</head>
+			<body>
+				<h1> Hello world</html>
+			</body>
+		</html>
+      All the Tags are recognised by the,Browser.
+      -Browser can be firebox,chrome,(Safari,MS Edge),Opera,Brave
+	  All these tags are real tags and indetified by browser.
+	  browser will occupy memory as well.
+	  
+	  React -> Js but also we can xml (<AWNISH></AWNISH>)
+	  Awnish Tag : it is not real Tag.
+	  it will create a virtual DOM 
+	  and will not occupy any memory.
+	  
+	  
+			Browser 
+			  |
+		Window Object 
+	          |
+          Document 
+             |
+            html
+       --------------
+       |             |
+     Head	        body	
+   
+	window.oncontextmenu = function(){
+       return false;
+    }
+	
+	concept of virtual DOM:-
+	======================
+	I dont know React How can I implement My Virtual Dom in Javascript?
+	
+	
+	https://www.youtube.com/watch?v=jwOW-qlJtxg&list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4&index=25
+	https://www.youtube.com/playlist?list=PLsyeobzWxl7qtP8Lo9TReqUMkiOp446cV
