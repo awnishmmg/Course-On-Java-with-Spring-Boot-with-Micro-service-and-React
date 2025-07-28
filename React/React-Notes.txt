@@ -219,7 +219,9 @@ Important React about React:-
 		Server of Node (server.js)
 		    |
 		Node Runtime Environment
-	  
+		1. node.exe itself 
+		2. npm.exe package manager => package install/uninstall
+		
 	  
 	  How to create our server using Node Js:-
 	  ========================================
@@ -228,7 +230,99 @@ Important React about React:-
 	  2. npm run start : node server.js 
 	  
 	  
+	 steps:-
+	 How to set up complete frontend application using, Node Js :-
+	 ===============================================================
+	M : mongodb : database
+	E : Express JS : backend framework of node js 
+	R : React Js : front end framework
+	N : Node Js : server side runtime environment.
+
+	Q1: How many ways can you reach lucknow to delhi
+	1. via Barelly (8 to 9 hours)
+	2. via Etewah (8 to 9 hours)
+	3. via Agra-yamuna Express (6 hours.)
+	
+	Express way : Express way 
+	Journey : shorted time cover 
+	1. no speed breaker.
+	2. 5 to 6 hours you will be here.
+	
+	we can create server using node js 
+	but we write lot of code and take of time.
+	we need some way,
+	hence Express package is like express highway
+	to write Backend application in Node Js less line of 
+	code and super fast  and in very less time.
+	
+	
+	steps :-
+	1. intialise the project or node app 
+	  at root folder -> server.js 
+	  cmd:/> npm init -y 
+	  
+	2. install express package 
+	   npm cache clean --force
+	   npm install express 	
+	
+	
+    3. After you install your express 3 main changes are done 
+	1. node_modules : main folder where all requires packages is installed.
+						|
+						express 
+		How to verify express install:-
+		cmd:/> npm ls express 
+		-- express@5.1.0
+	2. package.json 
+			{
+			dependencies : {
+				express : 5.1.0
+				}
+			}
 		
+	3. package.lock.json 
+	
+	what is difference b/w package.json and package.lock.json 
+	package.json : version : modify 
+	in order keep version of application stabled we need package.lock.json 
+	
+	tommorrow express version can change or not.
+	npm install express => latest @9.x 
+	Todays date what is version : 5.x 
+	
+	Application -> 5.x 
+	express ->9.x 
+	my code will give error.
+	
+	there should some way so that we can keep application 
+	version stable.
+	so we lock the version of packages(dependencies)
+	package.lock.json 
+	
+	
+	App /static -> Part
+		1. public : index.html 
+		2. src : components.
+		
+	frontend 
+		1. static application 
+		2. dynamic applications.
+		
+		
+		
+
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
 	
 	
 	
