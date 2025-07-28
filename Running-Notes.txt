@@ -1129,6 +1129,129 @@ Object Types :-
    
 	st.setRollno(1001).setName("Awnish").setClass("Btech").setBranch("CSE");
 	
+	constructors:-
+	=================
+	whenever we create a object of a class, a something very similar to class,
+	is automatically invoked by the compiler. The is called as constructor.
+	
+	Important point of constructor
+	1. same name as the class name 
+	2. called like a method 
+	3. has no return type.
+	
+	A a = new A();
+	This A() is called as constructor.
+	
+	Important of constructor:-
+	1. Act as setter.
+	2. it is responsible for intialisating the instance variable with default vaules.
+	like String name =  null 
+	like int result = 0
+	float salary = 0.0f
+	3. constructor is responsible for both instiantiation and intialisation
+		instiantiation => for the Object 
+		intialisation => instance variable.
+	
+
+	types of constructor:-
+	1. implicit constructor is called as default constructor and donot contain any 
+		parameter.
+		it is automatically declared by the compiler even if user donot explicit declare it.
+		
+	2. explicit constructor:- it is also called Parameterised constructor and it has be 
+	   declared by the users as per thier requirement.
+	   some of the user case 
+	   1. use the constructor as setter 
+	   2. using the constructor as database connector in JDBC.
+	   3. use of parameterise constructor in Scanner class to intialised the standard input.
+	   ...
+	   ...
+	   etc.
+	   
+	  syntax of the default:-
+	  ==========================
+	  class User{
+	  
+		String name;
+		String email;
+		String password;
+		
+		public User(){
+			// default constructor
+		}
+	  
+	  
+	  }
+	  
+	  syntax of the parameterised:-
+	  ==========================
+	  class User{
+	  
+		String name;
+		String email;
+		String password;
+		
+		public User(String name,String email,String password){
+			this.name = name;
+			this.email = email;
+			this.password = password;
+		}
+	  
+		// setter and getter 
+	  
+	  }
+	   
+	 Note : you cannot perform method chaining with constructor.
+	 for method chaining you must return current instance of the Object(this)
+	 
+	 How to verify that a constructor can have implicit signature :-
+	 ============================================================
+	 de-assemble the class file 
+	 javap <filename.class>
+	
+	constructor overloading :-
+	==========================
+	a constructor having same signature but different argument type or different parameter type.
+	as the object is created the constructor matching the signature with argument type
+	automatically invoked.
+	
+	Inheritance:-
+	=============
+	Getting the properties of the parent class in the child class without explicitly 
+	declaring it.
+	use case: Code Reusability.
+	
+	terminology :-
+	Base Class/Parent Class/Super Class/inherited class.
+	Child Class/sub class/derived class/
+	
+	types of inheritance:-
+	=====================
+	inheritance also defined the relationship b/w super and sub class.
+	
+	1. single inheritance
+	2. multi level inheritance
+	3. hierarical Inheritance
+	4. multiple inheritance
+	5. hybrid inheritance
+	6. cyclic inheritance
+	
+	Relationship in Inheritance
+	1. has Relationship : it donot use extends then also can we have inherit the properties.
+		1. composition 
+		2. aggregation
+	2. Is Relationship : can be achieved by extend and is a kind of pure inheritance
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
  

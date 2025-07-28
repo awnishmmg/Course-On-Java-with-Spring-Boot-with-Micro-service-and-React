@@ -140,3 +140,101 @@ Important React about React:-
 	
 	https://www.youtube.com/watch?v=jwOW-qlJtxg&list=PLsyeobzWxl7rrvgG7MLNIMSTzVCDZZcT4&index=25
 	https://www.youtube.com/playlist?list=PLsyeobzWxl7qtP8Lo9TReqUMkiOp446cV
+	
+	How to work with React:-
+    =========================
+	1. to work with React your system must have Node Installed.
+	2. Front end what Node Js has to with React.
+	
+	M : mongodb  =>database => javascript
+	E : Express JS => Backend => Framework => JavaScript
+	R : React Js => JavaScript => frontend Framework.
+	N : Node Js => Javascript Runtime Environment 
+				   Node Js is called as server side runtime environment.
+				   you can execute the code of javascript without browser.
+				   
+				   
+
+	 Full Stack developmenet (using Javasctipt Technology) = Front end (JS) + Backend (Js)
+	 Backend = Server Side Environment + Database 
+			   (Node Js)				(Mongodb)
+			   
+	 before 2008'v javascript used to be in Browser but now,
+	using node js you run javascript code outside browser.
+	
+	https://nodejs.org/en
+	1. LTS : Long term support -> stable version
+	2. current version : latest version
+	
+	1. How to check if node is install or not 
+	node --version 
+	
+	2. node comes with anothe tool which is called npm : node package manager
+	npm --version
+	
+	what is importance of npm:-
+   ================================
+   if you want donwload the package or some library or framework
+   we will npm 
+   
+   commands :-
+   npm install express 
+   npm install mongoose 
+   npm install react-dom 
+   npm install choclaty
+   
+   npm uninstall express 
+   npm uninstall mongoose 
+   npm uninstall react-dom 
+   npm uninstall choclaty
+	
+	install is of 2 types 
+	1. local installation 
+		1- it a project speicific.
+		node packages 
+	2, global installation 
+		once install need to not require another.
+		
+		when ever you install a package a speicial folder called node_modules are generated.
+		node_modules : All the liquired tools and library and functions, using 
+		which you can build any application, react, node ,express...
+		
+		
+	  react is a front end what relation it has with node js.
+	  1. react library donwload using npm 
+	  2. react is build upon node js code base.
+	  
+	  node js -> server side environment -> server -> on the top of server we have built react.
+	  
+	  
+	  Building
+		 |
+	  pillars 
+	  
+	  
+	  Front App (SPA)
+			|
+		   React
+	        |
+		Server of Node (server.js)
+		    |
+		Node Runtime Environment
+	  
+	  
+	  How to create our server using Node Js:-
+	  ========================================
+	  1. npm init -y 
+			package.json
+	  2. npm run start : node server.js 
+	  
+	  
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
