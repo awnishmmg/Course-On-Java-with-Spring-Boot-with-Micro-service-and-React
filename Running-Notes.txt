@@ -1242,6 +1242,53 @@ Object Types :-
 		2. aggregation
 	2. Is Relationship : can be achieved by extend and is a kind of pure inheritance
 	
+	there are 4 main concept for access level in inheritance
+	=========================================================
+	1. this 
+	2. super
+	3. super()
+	4. this()
+	
+	what is use of constructor?
+	consider 
+	class A{
+		String a; instance variable
+		int b;
+		
+		static int c //class variable 
+	
+	}
+	class Test{
+	
+	public static void main(){
+	
+		A a = new A('awnish',10);
+		A a1 = new A('sunny',20);
+		...
+		A a100 = new A('katrina',30);
+		
+		//new => new Object
+		//
+	}
+	
+	}
+	
+	
+	a ----------> A(a=awnish,b=10)
+	a100 ----------> A(a=katrina,b=30)
+	
+	this : current instance of the class at non static context, at that very instant.
+	this() : constructor of the class.
+		   : used in constructor chaining.
+		   
+		   
+		   
+		   
+	
+	
+	
+	
+	
 	
 	
 	
