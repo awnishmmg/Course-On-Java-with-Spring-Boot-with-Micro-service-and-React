@@ -1279,9 +1279,69 @@ Object Types :-
 	
 	this : current instance of the class at non static context, at that very instant.
 	this() : constructor of the class.
-		   : used in constructor chaining.
-		   
-		   
+		   : used in constructor chaining.		   
+	super. : used to access parent (immediate fields or methods)
+    super() : used to invoke parent contructor explicity.
+	
+	multi level inheritance:-
+	=========================
+	one child inheritence properties from multi level class.
+    grand Parent > parent > child.
+	in this inheritance one class may extend its parent and that parent may again  
+	inherit consecutive its parent class, as as so on....
+	child will inherit properties automatically from grand parent and parently respectivly.
+	
+	class A{
+		...
+	}
+	class B extends A{
+	    ...
+	}
+	class C extends B{
+	
+	}
+	Beauty : C will all the properties and benefit of A and B.
+	
+	Hirarichal Inheritance:-
+	A Single Parent having multiple childs is called Hirarichal Inheritance
+	Eg:-
+	
+	Class Papa{
+		private void car(){
+			...
+		}
+		public void scooty(){
+		
+		}
+		public void joota(){
+		
+		}
+	}
+	class beta extends Papa{
+	
+		public void bike(){
+		
+		}
+	}
+	class beti extends Papa{
+		public void ladyBirdCycle(){
+		
+		}
+	}
+	
+	Java is Sexy:-
+	S : Solid Principal 
+	E: Encapsulation
+	X : Extensible (inheritance) in Solid Principal (Same Type class behaviour repel and ooposite class behaviour attract -> hierarical)
+	Y : PolYmorphism 
+
+	
+	
+	
+	
+	
+	
+	
 		   
 		   
 	
