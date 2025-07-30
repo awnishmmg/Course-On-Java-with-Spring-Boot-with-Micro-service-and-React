@@ -308,7 +308,296 @@ Important React about React:-
 		1. static application 
 		2. dynamic applications.
 		
+	-client side rendering :- 
+		front end view render/generate
+	-server side rendering :-
+		server side view render/generate
 		
+		
+	Advantage :-
+	1. No reloading
+	2. Fast Executing
+	3. virtual dom 
+	4. less memory required, light wieght
+	
+	Biggest dis-advantage of React is :-
+	1. its not SEO Friendly.
+	
+	
+	How to SEO Works:-
+	1. SEO : Search Engine Optimisation 
+	   SEO  : it indexes all the website in order of there popularity 
+	   and search result.
+	   
+	   
+	Search Engine ---> Google ----> Algorithm ---> Web Crawling Algorithm.
+	Meta Tags 
+	Paragraphs 
+	Heading
+	
+	site content Read 
+	<p> Softpro Learning Center </p>
+	Paragraph : Real Dom
+    
+	Web Crawler ---------> Tag 
+	React ---> Virtual Dom ---> Page Tags Render 
+	Google Search Engine will be able crawl or no.
+	
+	React -> client side 
+	Page About.html -----> Server 
+	
+	Google Web Crawler (server) --------Request (About Us)--------> Softpro India 
+								       React  (404)
+							Request wont be send Server 
+									   
+     React dynamically loads entire content of website 
+	 in single web page and it helps user, to navigate 
+	 in different pages without Internet connnection 
+	 This is only possible because client rendering.
+	 
+	React : client side rendering.
+	SEO : server side rendering 
+	React -> Next Js -> SEO Friendly.
+	
+	The SPA Application we build using Node is good 
+	but it requires lot of code write.
+	so why use ready code base library : react.
+	
+	
+	1. in order to install react you need a utility tools 
+	npx : node package executable 
+	npm : node package manager.
+	
+	
+	Two flavour :-
+	1. Full stack Flavour:-
+		Entire front and backend you can integrate 
+		https://18.react.dev/learn
+		1. remix framework
+		2. refine framework
+		3. next framework
+		4. Gatsby framework
+
+		
+		react 19.v:-
+		TanStack Start (Beta)
+		RedwoodJS:
+		
+	2. stand alone Flavour:- (React Powered No Framework)
+		1. create-react-app : it is utility tools 
+							  using which you create react application
+							  
+		   npm install create-react-app --global 
+		   why we are installing globally 
+		   so that wheever i want i can create react app.
+		   
+		   
+		   npm install create-react-app --global
+		   npm ls create-react-app
+		   where create-react-app
+		   
+		   C:\Program Files\nodejs\create-react-app
+		   C:\Program Files\nodejs\create-react-app.cmd <-----utility software
+		   it is type executable.
+		   
+		   npx create-react-app <app-name>
+		   eg:-
+		   npx create-react-app ecommerce 
+		   npx create-react-app college-erp
+		   npx create-react-app flipkart
+		   
+		   check your app folder created or not:-
+		   =========================================
+		   cmd:/> dir 
+		   cmd:/> cd app1
+		   cmd:/> type package.json
+		   D:\Training\spi\Java-Technology\React\react-apps\app1>
+		   
+		   React Project Structure:-
+		   1. public 
+				1. manifest.json 
+				2. icon
+				3. index.html
+		   2. src 
+				|
+				1. App.jsx  | App.js
+				2. App.test.jsx | App.test.js 
+				3. index.js 
+		   3. package.json 
+		   4. node_module
+		   5. package.lock.json 
+		   
+		  command line file read :-
+		  cmd:/> type package.json
+		  
+		  or 
+		  open in notepad++ or notepad  or vscode
+		  
+		 importance of script key in package.json:-
+		 =========================================
+		 scripts key is used to :- 
+		 To Add you commands.
+		 
+		 {
+			"katreena":"echo katreena awnish gf"
+		 }
+		 
+		 How to run command in scripts:-
+		 cmd:/> npm run katreena
+				npm run <command-name>
+				
+		Now open code in vs code :-
+		Note : make sure you are inside app1 folder
+		cmd:/> code .
+		
+		How to run the Application of react :-
+		=======================================
+		open the package.json have a look once on scripts key.
+		
+		
+	"scripts": {
+    "start": "react-scripts start",  --> start the application on dev
+    "build": "react-scripts build",  --> make the production build
+    "test": "react-scripts test",  --> run the test case.
+    },
+	
+	In Industry we have 3 environment
+	1. production  : Live Application (Live User) (Bug free or min bug (stable version))
+		you cannot run your application like this you have build.
+		build : stable
+		npm  build 
+		or 
+		npm run build
+			In order to make build you need to tools 
+			
+			1. webpack : build or bundler
+			2. vite : build or bundler
+			3. parcel : build or bunder.
+			
+	2. dev : developer (Bugs)
+		npm start
+		or 
+		npm run start
+	3. test or stage : test is environment where test your application.
+		QA (Quality Analyst)
+		npm test 
+		or
+		npm run test 
+		
+	
+
+	There are 2 responsive framework
+	1. Boostrap CSS
+	2. tailwind CSS
+	3. materlize CSS
+	
+	
+	concept of react :-
+	1. one of the power ful feature about react is :-
+	hot realoading.
+	
+	Do you remeber in Node Js application we need restar our server.
+	for every change.
+	we are building large application for every change we need to restart 
+	
+	Yes or no.
+	we are one color,one css, one line , one heading , one paragraph 
+	every time we need to restart. 
+	
+	React people resolved this problem concept called : hot reloading.
+	Auto-reload the Page as soon code change.
+	
+	React Architecture:-
+	=======================
+			
+		   React
+			|
+		   express
+			|
+		Node Server
+			|
+	Node Runtime Environment
+	
+	
+	Internal Architecture of React:-
+	=================================
+			React
+	|----------------------------------|
+		  index.html
+			|
+		  Real Dom
+		  <div id="root">
+			<React App> (App.jsx or App.js)
+		  </div>
+	  who power react application 
+	      virtual Dom (react-dom)	
+			 |
+		  src/main.js(index.js) (document.getElementId('root'))
+	|------------------------------------|	   
+			|
+		  express
+			|
+		Node Server
+			|
+	Node Runtime Environment
+	
+	
+	main.js is real file which interacting with 
+	real DOM and Virtual DOM
+	
+	React Folder strucure meaning :-
+	public : static files 
+	
+	But our Entire react application static application.
+	there is some difference in meaning of public 
+	and src.
+	
+	Rule:-
+	React Actual code is inside src folder.
+	src (source code): logic and design part, js,css,images,component.scope
+	public folder: untouched.
+	
+	where is actual location main.js 
+    inside src:-
+	
+	step1 : make src folder and create index.js file.
+		src/index.js 
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	 
+	 
+	
+	
+	   
+	   
+	   
+	   
+	   
+		
+		
+		
+		
+		
+		
+		
+	
 		
 
 		
