@@ -1335,6 +1335,122 @@ Object Types :-
 	X : Extensible (inheritance) in Solid Principal (Same Type class behaviour repel and ooposite class behaviour attract -> hierarical)
 	Y : PolYmorphism 
 
+	multiple inheritence:-
+	single child derived from multiple different parents (min 2).
+	since in real world society wont accept a child from different parents,
+	for sake for standard culture.
+	
+	similary java being object oriented considered this relationship, as 
+	obscene(banned), as result it is not a part standard coding practise and not 
+	allowed to implement directly.
+	
+	class CarMusic extends GPS,AudioPlayer{
+		
+	
+	}
+	
+	
+	class AC extends Chiller,Blower{
+	
+	}
+	
+	Hybrid Inheritance:-
+	====================
+	more than 2 parents of different Family this is not allowed.
+	
+	Syntax:-
+	
+	class Cellphone{
+	
+	    //calling
+	}
+	
+	class MusicPlayer{
+	  //songs 
+	}
+    class Gps{
+		//GPs
+	}
+	
+	class Pazer{
+	   //Messaging
+	}
+    class Camera{
+	  //pictures 
+	}	
+	
+	class CamCoder{
+		//Recording Vedios
+	}
+	
+	
+	This concept is legally correct. but java does not allow to practise
+	
+	class SmartPhone extends Camera,Gps,MusicPlayer,CamCoder,Cellphone{
+	
+	}
+	
+	But with advancement Technology:-
+	Java people recognised that it is higly required feature if we want to achieve,
+	complex design mechanism or complex design pattern. (design pattern)
+	
+	Interface and Abstraction was improved in Java 9 version 
+	-Java 8 static and default keyword was allowed in interface
+	-java 9 private methods are also allowed.
+	
+	Lemmarts Rule of Inheritance:-
+	=================================
+	Rule :- if you want to N of features implement and N features already exist
+			so always try to utilise is relationship.
+			if feature is more than 1 then 1 feature must be exended using 
+			is-relationship and N-1 features must be extended using has relationship
+			in this way can achieve any that of Design Principal 
+			
+			Eg: multiple inheritance or Hybrid Inheritance or cyclic Inheritance.
+			
+			
+	Story behind  cyclic Inheritance:-
+=======================================
+ Hint : Samaya Ka Pahiya Chalta Di Dhalta Raat ati...
+ when we create object => new Object create => born => constructor
+ when a object is destroyed => death => destructor 
+ 
+ Parent/papa = Human => born => new Class()
+ Parent/papa = death => null (moksh)
+  if parent is not assigned with moksh he will become bhoot and disturb you.
+  
+  Mr. Kamlesh : 
+  class Parent{
+  
+  
+  
+  }
+  
+  class Child extends Parent{
+  
+  
+  }
+  
+  Child child = new Child(); => Baap/Papa/Babu Ji/Pita Ji 
+  
+  child : deepak
+  papa : kamlesh
+  
+  
+  
+  
+
+
+
+ 
+
+
+
+
+
+		
+			
+	
 	
 	
 	
