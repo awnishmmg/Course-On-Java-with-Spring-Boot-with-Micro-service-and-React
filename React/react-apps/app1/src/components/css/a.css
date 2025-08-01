@@ -1,0 +1,13 @@
+/* class of the heading */
+.aheading1 {
+  font-size: 4rem;
+  color: red;
+  background-color: aqua;
+  font-style: italic;
+}
+
+#apara1 {
+  background-color: green;
+  color: red;
+  font-family: Verdana;
+}

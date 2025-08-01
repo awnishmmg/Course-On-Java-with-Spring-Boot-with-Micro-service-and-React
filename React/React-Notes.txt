@@ -564,6 +564,233 @@ Important React about React:-
 		src/index.js 
 		
 	
+How to Run existing Project:-
+================================
+1. Make sure you have installed.
+2. git clone https://github.com/awnishmmg/Course-On-Java-with-Spring-Boot-with-Micro-service-and-React.git
+3. cd app1
+4. type package.json 
+5. npm install 
+6. npm run start
+
+How to push:-
+============
+1. Login to your git Hub.
+2. get the class token from developer section.
+
+
+
+in order push or pull we need url:-
+=================================
+if you are the owner : you will be creating the url, if you are not owner you will 
+not the creating the url. you will be provided with git url or access.
+
+
+what is .gitignore file:-
+The file which add in .gitignore will not be pushed in repo.
+eg: we have public repo and we have database credentials config.js 
+
+config.js
+node_module
+logs
+.env
+
+Tokenised URL:- : Push or Pull or fetch or contribute
+https://username:<token>@github.com/normal-url
+
+origin = https://awnishmmg:<token>@github.com/awnishmmg/react-spa-spring-boot.git
+
+origin : just a variable name which url path.
+
+Normal URL:- https://github.com/awnishmmg/react-spa-spring-boot.git (clone|pull|fetch) donwload
+
+How to find the owner name in existing repo:-
+============================================
+global :
+
+git config --global user.name 
+name : Awnish Kr Sharma
+
+git config --global user.email 
+email : awnishmmg.a41@gmail.com
+
+local :-
+git config --local user.name 
+name : Awnish Kr Sharma
+
+git config --local user.email 
+email : awnishmmg.a41@gmail.com
+
+default:-
+git config user.name 
+name : Awnish Kr Sharma
+
+git config user.email 
+email : awnishmmg.a41@gmail.com
+
+owner : system owner
+repo owner :  
+cmd:/> git log 
+	All the people who has access to the repo all called owner or contributer.
+	owner 
+		1. owner : create,delete,update
+		2. maintainer : create,update no delete permission 
+		3. developer : push and pull
+		4. reporter : report issue, and read.
+	
+React is powered by components:-
+==============================
+component are re-usable elements. just like functions.
+functions we define once and re-use again.
+function concept are just, pickel.
+
+React has two types of component
+1. class based component : older convention
+2. functions based component : latest convention
+
+in class based component we make class based syntax.
+function based component we make function based component.
+
+React Hirerarichal Structure :-
+Parent 
+	child1 
+		child2
+			child3
+			
+
+
+index.js
+	App 
+	  A 
+	  
+in React data will flow from parent to child.
+	<App>
+	   <A/>
+	</App>
+
+   A is nested component App.
+   A is child App 
+   App is a Parent of A 
+   
+   
+   Self Closing Component 
+   <A/>
+   Container component
+   <A> </A>
+	when we have child component 
+		children keyword used to access the child.
+		
+
+	one way binding:-
+	================
+	{} => You can evaluate an expression.
+	{} => conditions ternary 
+    {} => Equations 
+	{} => variable resolve or dynamic.
+	
+	if you want to generate content we can {} bracket in html view. JSX.
+	
+	Rule :- in React every property of html becomes 
+	javascript object.
+	convention : javascript
+	
+	<h1 class="myclass">This is Heading</h1>
+	
+	Css in React :-
+	===============
+	1. inline 
+	2. external 
+	3. Internal is dangerous.
+	
+	css properties :-
+	background-color : blue (kebab-case)
+	
+	{
+	  backgroundColor : "blue"
+	}
+	
+	inline css:-
+	=========
+	style={{ backgroundColor: "red", color: "blue" }}
+	
+	external css:-
+	==================
+	
+	
+	Rule : JS or Jsx file css will is JS Style 
+	Css file : it will in css style
+	
+	if you class="myclass"
+					|
+					class component
+					class css 
+					
+	class : keyword resererved 
+    className  : camelCase 
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	
