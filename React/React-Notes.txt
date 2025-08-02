@@ -637,6 +637,180 @@ cmd:/> git log
 		2. maintainer : create,update no delete permission 
 		3. developer : push and pull
 		4. reporter : report issue, and read.
+		
+by default branch : master,main
+How to download :-
+1. git clone : first time download 
+	git clone <url>
+2. git pull : for every update if you want download 
+	git pull 
+	
+	use case of the git pull :-
+	============================
+	consider a Team with 
+	1. project manager (owner/mainter) 
+	2. 2 Developer mr. santa,banta (1 Dev : mainter or 1 dev : developer)
+	3. 1 Tester (reporter)
+	
+	Request -> collaberator request.
+	settings -> collaberator -> add or remove.
+	
+	santa@xyz.com
+	banta@xyz.com 
+	manager@xyz.com 
+	tester@xyz.com 
+	
+	by-default : role assign : developer.
+	Note : push and pull is branch specific.
+	by-default : master or main
+	
+	git branch : All the branches available in the repository 
+	
+	git branch 
+	git branch --all
+	
+	branches two types 
+	1. local branch : white or green
+		green - current branch
+	2. remote branch : present in server 
+		
+	Note : master is always stable and you should always create your own branch.
+	all the branch other than are called feature branch.
+	
+	checkout command:-
+	====================
+	git checkout <branch>
+	to switch any branch 
+	
+	
+	How check status:-
+	===================
+	git status 
+	
+	How to add the files stage :-
+	========================
+	git add . => All files stage.
+	git add about.html => only About file 
+	
+	
+	git restore --staged <filename1>,<filename2>
+	or 
+	
+	git restore --staged <filename1>
+	git restore --staged <filename2>
+	
+	How to restore file :-
+	=======================
+	git restore filename1
+	
+	How to commit :-
+	===============
+	git commit -m "Your Message"
+	
+	How to check log :-
+	================
+	git log 
+	
+	Note : HEAD -> most recent commit => HEAD Branch 
+	
+	How to check url of remote server:-
+	=====================================
+	git remote -v 
+	origin <fetch>
+	origin <push>
+	
+	git pull 
+	git push origin ashu-dev
+	
+	Note :- before push always run git pull
+	Note :- Always set the user.name and user.email 
+	
+	How to set user.name 
+		git config --global user.name "Awnish Kumar"
+	How to set user.email 
+		git config --global user.email "awnishmmg@gmail.com"
+	
+	How to get user.name 
+		git config --global user.name
+	How to get user.email 
+		git config --global user.email
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		
+	
+	
+	
+git fetch 	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	
 React is powered by components:-
 ==============================
@@ -779,14 +953,19 @@ in React data will flow from parent to child.
       <App />
      </BrowserRouter>
 	 
-	 step3 :- Make your Page components ready.
+	 Step3 :- Make your Page components ready.
 	 make pages folder 
-	src/components/pages 
+	 src/components/pages 
 		1. Gallery.jsx 
 		2. Login.jsx
 		3. Home.jsx
 		...
 		...
+		
+		
+		
+		
+		
 		
 	 
 	 
