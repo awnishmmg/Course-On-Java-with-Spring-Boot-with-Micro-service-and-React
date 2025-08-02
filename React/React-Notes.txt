@@ -725,10 +725,78 @@ in React data will flow from parent to child.
 					class component
 					class css 
 					
-	class : keyword resererved 
+	class : keyword reserved 
     className  : camelCase 
 	
-
+	Concept of MPA in SPA :-
+	=======================
+	MPA : multi page application 
+	SPA : single page application
+	
+	Our React is single page application. 
+	How we can manage Multiple Pages in SPA.
+	
+	Do you remeber code base of React using Node and express:-
+	==========================================================
+	components/pages
+		-About.js 
+		-Gallery.js 
+		-Home.js 
+	Does these component behave independent page or not.
+	
+	what does node and express router do :-
+	========================================
+	/login 
+	  |----------> login.js =====> render 
+	/gallery 
+	  |-----------> Gallery.js ====> render 
+	/contact 
+	  |-----------> Contact.js  ====> render
+	
+	 according to URL we have render our component.
+	 we need router for this. 
+	 so react provider readymade router 
+	 
+	 The name of that router is react-router v5
+	 by default react-router is not available in react 
+	 we install it.
+	 
+	 step1 :-
+	 cmd:/> cd app1
+	 cmd:/> type package.json
+	 cmd:/> npm install react-router-dom@5
+	 
+	 steps 2:-
+	 =========
+	 Set up the router with index.js 
+	 integrate BrowserRouter withj index.js 
+	 
+	 import { BrowserRouter } from "react-router-dom";
+	 
+	 Replace App with this code  :-
+	 
+	 <BrowserRouter>
+      <App />
+     </BrowserRouter>
+	 
+	 step3 :- Make your Page components ready.
+	 make pages folder 
+	src/components/pages 
+		1. Gallery.jsx 
+		2. Login.jsx
+		3. Home.jsx
+		...
+		...
+		
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	
 	
 	
