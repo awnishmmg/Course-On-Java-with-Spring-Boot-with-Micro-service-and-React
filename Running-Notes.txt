@@ -1436,6 +1436,155 @@ Object Types :-
   child : deepak
   papa : kamlesh
   
+  Data Abstraction:-
+  ================
+  when we want to hide internal working, or features but only allow essential features to be exposed 
+  is called Abstraction.
+  The Main Agenda of Abstraction is achieve, visibility.
+  Media House is a best example of data Abstraction.
+  
+  core concepts:-
+  1. concerete class (SOLID)
+     A class which have concepts and its complete implement then it is called concrete 
+	 complete 
+	 This is Non Abstract Class.
+	 Non Abstract Method 
+	 No abstract Keyword Required 
+	 
+  2. non-concerete class.
+	A class where concept is known but partial implementation is know said to be non concrete 
+	class.
+	 partialy complete
+	 Abstract Class (collection Abstract Method and Non Abstract)
+	 abstract keyword
+	 
+  3. purely non-concerete class where we know the Idea but donot have anything about 
+	 implementation that is purely non concrete class.
+	 in-complete.
+	 purely Abstracted Class (All methods will abstract)
+	 oops => Interface
+	
+	  what is Interface ?
+	  100 % Abstracted features is Interface
+	  All Methods Abstract.
+	
+	 when we want to Indentify Abstract or Non Abstract we need to explicitly specify.
+	 A class contains methods 
+	 1. class -> abstract -> abstract class.
+	 
+	 How to declare the Abstract class:-
+	 ===================================
+	 use abstract keyword 
+	 Non Abstract Class 
+	 ====================
+	 or 
+	 Concrete Class.
+	 ====================
+	 class Car{
+	 
+	 }
+	 
+	 Abstract Class 
+	 ==================
+	 or 
+	 Non Concrete class
+	 ===================
+	 abstract class Dayan{
+	 
+	 }
+	 
+	 How to declare the Abstract method:-
+	 ====================================
+	 use abstract method 
+	 
+	 Abstract Method:=
+	 =======================
+	 public abstract void dance(); 
+	 Note : if method signature is not complete then it is called as Abstract method 
+	 
+	 Non Abstract Method :-
+	 ============================
+	 No use of abstract keyword, Signature of the method will be complete.
+	 
+	 public void sing(){
+		System.out.println("This is Sing Method");
+	 }
+	 
+	 
+	 Note : you can make object of only, concrete class.
+	 Note : you cannot directly make object of abstract class or interface.
+	 
+	 Java 8,9+ Updates in Interface:-
+	 =================================
+	 1. static method in Interface.----------> class level
+	 2. default method -----------------> Object level
+	 3. private method ------------------> Object Level 
+	 
+	 Note : we cannot directly make the object of abstract class or interface.
+	 but when implement inheritance then the methods will be @override 
+	 and it can be access by child object .
+	 
+	 Note : class -> extends 
+	 Interface -> implements 
+	 
+	 Note : , comma operator not allowed in extends 
+	 Note : , comma Operator allowed in implements
+
+	Note : class A extends C1,C2,C3 --> Invalid (multiple inheritance,hybrid)
+	Note : class A implements I1,I2,I3  ---> valid (multiple inheritance,hybrid)
+	
+	
+	Rule :-
+	=======
+	Any child class, who ever inherits abstract class or interface, 
+	then it is child class responsibly to implement this signature of the abstract methods 
+	of abstract class or interface.
+	This is called as Responsibility Principal of SOLID Principal:-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	
+	
+	
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
