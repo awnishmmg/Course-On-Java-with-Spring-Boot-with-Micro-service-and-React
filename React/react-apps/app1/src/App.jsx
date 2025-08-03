@@ -20,7 +20,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/gallery" component={Gallery} />
-          <Route path="/about" component={About} />
+          {/* This is comment : dynamic argument  */}
+          <Route path="/about/:id" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/contact" component={Contact} />
           <Route path="*" component={Not} />

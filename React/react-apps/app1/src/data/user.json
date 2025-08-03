@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": "1001",
+            "name": "Awnish Kr",
+            "gf_name": "Sunny",
+            "account_balance": 100000
+        },
+        {
+            "id": "1002",
+            "name": "Deepak",
+            "gf_name": "Nisha",
+            "account_balance": 12000
+        },
+        {
+            "id": "1003",
+            "name": "Rahul",
+            "gf_name": "Muskaan",
+            "account_balance": 50000
+        },
+        {
+            "id": "1004",
+            "name": "Adarsh",
+            "gf_name": "Shivani",
+            "account_balance": 200000
+        }
+    ]
+}
