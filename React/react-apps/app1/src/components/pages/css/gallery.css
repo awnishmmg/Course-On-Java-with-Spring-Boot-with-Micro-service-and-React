@@ -1,0 +1,24 @@
+/* Gallery css */
+
+.background-layer {
+  background-image: url("https://media.istockphoto.com/id/2186871098/photo/marl-lake-sun-pillar-sunrise.jpg?s=1024x1024&w=is&k=20&c=xDMlQQnkRhDAWzED9L9IUnzFueFD5k57NnCAlsidgt0=");
+  height: 300px;
+  width: 100%;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 300px;
+  width: 100%;
+  color: white;
+  font-family: "Arial";
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+}
+
+.circle-batman {
+  border-radius: 50%;
+  border: 2px dashed silver;
+}

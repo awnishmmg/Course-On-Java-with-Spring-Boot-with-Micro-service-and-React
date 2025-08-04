@@ -897,6 +897,99 @@ Important properties of routes:-
 	path : about/:id  : static
 	url : about/1 : dynamic 
 
+How to import images and icons  :-
+=====================================
+The concept of importing images and icons remains same.
+
+How to integrate the images in react 
+these are local Images:-
+========================
+1. from public folder 
+2. from src 
+
+you can directly integrate the cdn links 
+cdn link : content network network.
+Images if they are hosted cdn server and you get the link to the image you can directly link 
+that path.
+
+cdn link : Browser will automatically fetch inside any tags,css or background or img tag.
+
+https://media.istockphoto.com/id/2186871098/photo/marl-lake-sun-pillar-sunrise.jpg?s=1024x1024&w=is&k=20&c=xDMlQQnkRhDAWzED9L9IUnzFueFD5k57NnCAlsidgt0=
+
+Some Open Source Resource for cdn:-
+-github.com 
+-mediafire 
+-imagekit 
+
+cloud server for cdn :-
+========================
+aws s3 bucket images in cdn 
+cloudfront.com 
+
+Important point :-
+if you are using cdn links then definetly you can integrate directly from tags from css as well.
+
+How to add images locally.
+Note if images or icons are inside src :-
+=======================================
+it can be imported like json or css files with a reference then use it anywhere.
+
+import linkedIn from "../../assets/icons/icons8-linkedin-100.png";
+		|
+		reference variable
+		
+if images are at public folder 
+=======================================		
+if images or icons are stored inside public folder they will act static files.
+and they can directly called using /foldername/filename.extension
+
+eg:-
+public
+	|index.html
+	|icons 
+		apple.jpg
+		
+	
+	/icons/apple.jpg
+	<img src="/icons/apple.jpg" alt="appple" height={50} width={50}/>
+
+
+using require("path/to/image")
+================================
+<img src={require("path/to/image")} alt="appple" height={50} width={50}/>
+
+Hosted url of cdn links:-
+https://github.com/awnishmmg/my-cdn-assets
+
+we can implement bootstrap by 3 ways 
+========================================
+1. using cdn link 
+2. using distributed min files boostrap.min.js or min.css locally
+3. using React bootstrap framework
+
+-cdn is always fast.
+-no compilation required in the webpack.
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
 
 		
 		
