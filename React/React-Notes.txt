@@ -885,23 +885,19 @@ in React data will flow from parent to child.
 		...
 		...
 		
-		
-		
-	Important properties of routes:-
-	===============================
-		1. match 
-		2. location 
-		3. params
-		4. history
-		
-		
-		what is difference url and path :-
-		path : about/:id  : static
-		url : about/1 : dynamic 
-		
-		
-		
-		
+Important properties of routes:-
+===============================
+	1. match 
+	2. location 
+	3. params
+	4. history
+	
+	
+	what is difference url and path :-
+	path : about/:id  : static
+	url : about/1 : dynamic 
+
+
 		
 		
 		

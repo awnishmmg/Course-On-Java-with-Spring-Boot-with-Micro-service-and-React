@@ -1542,6 +1542,271 @@ Object Types :-
 	This is called as Responsibility Principal of SOLID Principal:-
 	
 	
+	Interfaces:-
+	=============
+	it is fully abstract class.
+	
+	interface MyInterface{
+		public abstract void drink();
+		public abstract void sing();
+		public abstract void dance();
+		
+		//Non Abstract with Non static context and object level method.
+		default void sleep(){
+			System.out.println("Sleeping 8-9 Hours");
+		}
+		
+		//Non Abstract with static context and class level method.
+		public static void enjoy(){
+			System.out.println("Enjoy your personal Space & time");
+		}
+		
+		//Non Abstract with Non static context and object level method.
+		private void meTime(){
+			System.out.println("Me time");
+		}
+	}
+	
+	Direct Object of Interface not allowed.
+	
+	JDBC:-
+	======
+	Suppose you are desinging the banking, application you have stored n of data 
+	in Java application.
+	n = 20 User data you have stored, you will be access the data till the JVM is executing.
+	once JVM Shut downs your programm your all data is lossed.
+	
+	that is why we need some permanent solution for data storage.
+	1. using File Handling.
+	2. using some external Databases.
+	
+	In Java 5 version, a Driver named ODBC was launched with incorporation to sun-microsystem.
+	for communicating with Oracle database.
+	packagename :-
+	sun.jdbc.odbc.JDBCODBCDriver
+	
+	Any Enterprise, who have native commercial license oracle only people can communicate 
+	with Oracle.
+	This is was time when Java Application were to perform crud operation with Oracle Database.
+	
+	JDBC provides a mechanism, to perform crud operation or communicate with database.
+	so that we can permanently store and manage the data.
+	
+	JDBC is a Java API Service or Java API Interface which helps your application 
+	to communicate with any database.
+	
+	-Intially designed with, oracle database.
+	-later on extended two, all the open database Engines.
+	
+	JDBC supports 4 types of DB Drivers 
+	1. type 1 : JDBC ODBC Driver / JDBC ODBC Bridge Driver.
+	2. type 2 : JDBC Native or System Specific Driver. 
+	3. type 3 : Network Protocal or Network Based Driver.
+	4. type 4 : Thin Layer java db driver.
+	
+	type 1 : JDBC ODBC Driver / JDBC ODBC Bridge Driver.
+	====================================================
+	1. Bridge driver 
+	2. Implement Bridge class (Design pattern of GOF-s)
+	3. Plateform Dependent : Yes 
+	4. Scalable : yes but only scalable at java and oracle infrastructure.
+	5. Destributed : No Centralised
+	   Architecture : 1 Tier Architecture
+	6. Driver : it needs Oracle driver to be installed at client machine.
+	7. latency/performance : high at oracle infrastructure but low at distributed.
+	
+	Java to Oracle family,
+	Java legacy version (Oracle specific cjdk) these people are using 
+	Type 1 
+	Salesforce is one of company which is still using its product at \
+	Type 1 because close relationship with Oracle co-operation.
+	Requires Oracle License.
+	Standlone or Desktop Application using J2SE or J2ME.
+	
+	Note : Open JDK people after java 8th has stopped the support of the type 1 Driver
+	but still used by Oracle specific vendor for testing an development in legacy application
+	8.  Single Vendor Specific : only oracle.
+	9. Need to be explicitly installed
+	
+	
+	type 2 : JDBC Native or System Specific Driver. 
+	====================================================
+	1. JDBC Native or System Specific Driver.  
+	2. Implement Singeleton class (Design pattern of GOF-s)
+	3. Plateform Dependent : Yes 
+	4. Scalable : No 
+	5. Destributed : No 
+	   Architecture : 1 Tier Architecture
+	6. Driver : it needs native driver to be installed at client machine for any specific db.
+	All the driver specific jar files, tools and libraries need to be installed.
+	7. latency/performance : better then type 1
+	
+	Java to open family,
+	if you want work with Sqlite, then you need SQLite driver to be installed in client 
+	machine so that you can perform crud operations or db operations
+	
+	J2SE or J2ME.
+	eg: in Android if you using SQLite database with Java Application you need to explicitly 
+	insatlled SQLite driver.
+	8. it is vendor specific.
+	9. Need to be explicitly installed
+	
+	
+	type 3 : Network Protocal or Network Based Driver.. 
+	====================================================
+	1. Network Protocal or Network Based Driver 
+	   To be used when we are building internet enable application.
+	   Web based application.
+	2. Implement Singeleton class (Design pattern of GOF-s)
+	3. Plateform Dependent : No
+	4. Scalable : Yes
+	5. Destributed : Yes 
+	   Architecture : 3 Tier Architecture
+	   Client Machine--------> Middleware <------------Server(Java App)
+								 DB
+							All driver,tools,jars 
+							installed in Middle 
+					
+		Now we can connect any no of client machines to server without installing any 
+		driver in client machine.
+		
+								 
+	6. Driver : to installed in DB Middleware no need to install in client
+	7. latency/performance : better then type 2 and good performance
+	
+	 Api Gateway introduced in 3 type driver, 
+	 helped in converting java app calls to db calls.
+	 Inter-Operability  was introduced in this layer.
+	
+	 Inter-Operability :-
+	 finding a common solution without converting native calls.
+	 
+	 China ------speak-----> English --------> listen/understand----> India.
+	 Chinese                                                       Hindi/Bhoojpuri/Tamil    
+	 
+	 1. XML  : SOAP API
+	 2. JSON : REST-API
+	 
+	 
+	 type 4 : Thin Layer java db driver. 
+	====================================================
+	1. Thin Layer java db driver
+	   Any type if application
+	2. Implement Singeleton class (Design pattern of GOF-s)
+	3. Plateform Dependent : No
+	4. Scalable : Yes
+	5. Destributed : Yes 
+	   Architecture : Nth Tier Architecture			
+	6. Driver : No Installion Required
+	7. latency/performance : very high performance
+	8. it is vendor neautral
+	9. comes with almost 20+ RDMBS enabled, inbuilt driver support.
+	  just only changes connection string and you application is ready to be used.
+	  
+	  SQL Driver Manager class.
+	  
+	  
+	Some Advantage concepts:-
+	1. ORM (Object Relational Mapper)
+	2. DAO Layer (Database Access Object Layer)
+	3. Query Builder 
+	4. Dependency Injection 
+	5. Maven/Gradle : same as NPM (package manage tool)
+	
+	
+	Layer of JDBC Applications 
+	MVC 
+	M : model 
+	v : view 
+	C : controller -> middleman or middleware b/w view and controller 
+		communicates b/w view and model 
+		Bussiness Logic 
+		
+	v : design part html and css and Javascript 
+	M : Database Logic.
+	
+	JDBC is part of Model Architecture in MVC:-
+	=======================================
+	1. Driver Engine 
+	2. Driver Manager 
+	3. Connection Manager with Connection String 
+	4. SQL Statement /Prepared Statement /callable statement 
+	5. commit state 
+		1. single commit 
+		2. multi commit /Transactions.
+	6. connection pooling 
+	7. Exceptional Handling. 
+	8. closing the Connection 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+	  
+	  
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
