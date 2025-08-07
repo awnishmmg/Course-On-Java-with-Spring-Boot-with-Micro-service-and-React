@@ -1730,13 +1730,221 @@ Object Types :-
 	1. Driver Engine 
 	2. Driver Manager 
 	3. Connection Manager with Connection String 
-	4. SQL Statement /Prepared Statement /callable statement 
+	4. SQL Statement/Prepared Statement /callable statement 
 	5. commit state 
 		1. single commit 
-		2. multi commit /Transactions.
+		2. multi commit/Transactions.
 	6. connection pooling 
 	7. Exceptional Handling. 
 	8. closing the Connection 
+	
+	
+	-How many ways of using JDBC:-
+		1. Direct Access 
+		2. DAO Layer Access (DB Access Object/DB Abstraction) : Some Middle ware logic 
+		will be envolved to prevent direct access.
+		we make a API Interface which will sperate the logic of direct access from db.
+		
+		it is kind of middleware (Dao) seperates the logic for the, Actual DB, 
+		Implementation in Models.
+		Sprint Boot also uses same architecture (JPA Layer.)
+	
+	
+	-Direct Access :-  In this logic our application App.java (MainApp.java/Main.java)
+	it will directly execute query and communicate with Database
+	Approach : Monolythic.
+	Not Recommended for Enterprise level application.
+	
+	1. Setup the connection
+		1. load the driver (mysql.connector)
+							Java Archive file (.jar)
+							com.jdbc
+								|
+								cj
+								 |
+								 ...
+								 ...
+								 Driver (fully qualified name)
+		2. set up the credentials.
+			dsn : domain server name 
+			connectionProtocol://hostIp:port/database
+			http://,ftp://,smtp://
+			
+			mysql://127.0.0.1:3306/java_college_db
+			or 
+			mysql://localhost:3306/java_college_db
+			
+			since we are making connection using jdbc
+			
+			DBurl = jdbc:mysql://localhost:3306/java_college_db
+			
+			username : root 
+			password : ""
+			
+		3. create the connections.
+		
+		Note : Only we one class DriverManager class All other things are interfaces.
+		Note : in order to perform any query operation we need connection Object 
+		connection instance.
+		
+		
+		Connection connection = Driver.getConnection(DBurl,dbUser,dbPassword);
+		
+    2. Indentify the type of Query:-
+	   CRUD 
+	   C : insert (writable/commitable)
+	   R : Read  (readable/non-commitable)
+	   U : update (writable/commitable)
+	   D : Delete (writable/commitable)
+	   
+	  case 1:
+	  if query is readable it will always return data This special data is 
+	  stored in form of Resultset 
+	  case 2:
+	  if query is writable it will return a int value for no of effectedRows.
+	  
+	  Eg: 
+	  2 Record Insert -> 2 
+	  2 Update -> 2 
+	  2 delete -> 2
+	  connection object has flag value 
+	  1. updateflag : it tells where some records are effected or not 
+					  it tells where the query was writable or not.
+					 	  
+	   updateflag = true  
+       connection -----------> executeUpdate()
+	   updateFlag = false 
+	   connection ------------> executeQuery()
+	   
+	   
+	   select -> executeQuery()
+	   insert -> executeUpdate()
+	   delete -> executeUpdate()
+	   update -> executeUpdate()
+	   
+	   
+	3. prepare the Query
+	   1. static query : statements
+	   2. dynamic query : preparedStatement
+	   
+	   statements : In-secure => SQL Injection Attack 
+	   we must go for preparedStatement
+	   
+	   select * from student where id=? => prepared statement 
+	   select * from student where id=1001 => statement 
+	   
+	    int id = 1001 
+	   "select * from student where id="+id 
+	   
+	   
+	   Insert into student(name,age) values('Awnish',28) => Statement 
+	   
+	   Statement statement = connection.createStatement();
+	   PrepareStatement ps = connection.createPrepareStatement();
+	   
+	   sql1 = "select * from student where id="+id 
+	   Statement statement = connection.createStatement();
+	   
+	   sql2 =  select * from student where id=?
+	   
+	   sql3 = Insert into student(name,age) values('Awnish',28)
+	   
+	   sql4 = Insert into student(name,age) values(?,?)
+	  
+4. fire the Query (execute)
+	  
+	   sql1 = "select * from student where id="+id  (readable => s.executeQuery(sql1))
+       s => statement 
+	   ps => prepareStatement
+	   
+	   sql2 =  select * from student where id=? (readable => ps.executeQuery(sql2))
+	   
+	   sql3 = Insert into student(name,age) values('Awnish',28) (writable => s.executeUpdate())
+	   
+	   sql4 = Insert into student(name,age) values(?,?)   (writable => ps.executeUpdate())
+	   
+	   
+5. check the return type :-
+   readable : Resultset 
+   
+     Statement statement = connection.createStatement();
+	 Resultset rs = statement.executeQuery(sql)
+   
+	 PrepareStatement ps = connection.createStatement();
+	 Resultset rs = ps.executeQuery(sql)
+	 
+     writable : int 
+	 =============
+	 
+	 Statement statement = connection.createStatement();
+	 int effectedRow = statement.executeUpdate();
+   
+	 PrepareStatement ps = connection.createStatement();
+	 int effectedRow = statement.executeUpdate();
+	   
+	  Note : it these Query fail they will return SQL Exception
+	  This means we must use try and catch
+	  
+Additional Pointers :-
+3 Possible Exception 
+	1. ClassNotFoundException 
+		Class.forName()
+	2. SQLException 
+		statements or prepareStatement
+	3. Exception
+		General Exception 
+		
+		
+Note : Resultset rs is a cursor object is a pointer 
+	 pointer can move left(previous) right (next())
+
+
+
+	 
+	
+	
+
+
+	   
+	   
+	   
+	   
+	   
+					  
+	   
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

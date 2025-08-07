@@ -970,6 +970,140 @@ we can implement bootstrap by 3 ways
 -cdn is always fast.
 -no compilation required in the webpack.
 
+====== How to interect with forms :===========
+Javascript is all about dom manupulations with get and set.
+
+How to Work with Events:-
+========================
+onClick : Event 
+onclick : onClick 
+onchange : onChange
+onfocus : onFocus 
+onblur  : onBlur 
+onmouseover : onMouseOver
+onmouseleave : onMouseLeave
+onhover : onHover
+onload : onLoad
+...
+...
+
+state in react are special variable which when changes automatically renders the UI.
+state is always global. 
+React getter and setter 
+	  getter => variable => state 
+	  setter => method => state value set 
+	  
+	  
+React is powerful because hook.
+hook is special function which is used add functionality to any component.
+================
+Types of hooks 
+================
+
+pre-defined hook 
+=================
+Total 18-19 Hooks
+1. useState : Hook 
+2. useEffect : Hook 
+3. useRef : Hook 
+4. useId : Hook 
+5. useMemo : Hook 
+6. useContext : Hook 
+ 
+custom hook or user-defined 
+These user-defined made my programmer for there own use case.
+when ever you want to work with hooks you need to use, useState 
+
+
+step 1:-
+=========
+const [getter,setterMethod] = useState(0)
+intial stage : getter => 0 
+
+setterMethod(10)
+
+states are by-default im-mutables they are readonly.
+they cannot be set directly.
+that is why we need setter
+Note :-
+==========
+React support one way binding we need to enable two way binding.
+In each value change we must call setter method
+
+To Observe the change we have an event OnChange
+Javascript All event functions have event object object as parameter.
+
+
+onClick : Event  => event
+onclick : onClick  => event
+onchange : onChange => event
+onfocus : onFocus  => event
+onblur  : onBlur  => event
+onmouseover : onMouseOver => event
+onmouseleave : onMouseLeave => event
+onhover : onHover => event
+onload : onLoad => event
+
+event object logs every activity perform target.
+event object is binding some functions  and each function is binded to, element.
+
+Jis element mey event perform => event Object target => what ever value is change it will 
+returned as a result.
+
+How to prevent Page from submitted/Refresh:-
+=====================================
+1. convert input type submit -> input button 
+   <button type="button"> Submit </button>
+   
+2. form Tag => onSubmit={() => {
+            return false;
+          }}
+	 
+		onSubmit={() => {
+            return false;
+          }}
+
+3. event.preventDefault()
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
