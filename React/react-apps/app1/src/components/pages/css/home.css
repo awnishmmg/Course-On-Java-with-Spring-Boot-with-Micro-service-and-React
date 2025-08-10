@@ -1,0 +1,5 @@
+.home-table-userdata tr,
+th,
+td {
+  border: 1px solid black;
+}
