@@ -1,0 +1,79 @@
+.agri-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  background: linear-gradient(135deg, #f7fdf7 0%, #e6f7ff 100%);
+  color: #333;
+}
+
+.agri-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #2e7d32, #66bb6a);
+  color: white;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+.agri-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.agri-hero span {
+  color: #ffeb3b;
+}
+
+.agri-mission,
+.agri-features,
+.agri-future {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.agri-mission h2,
+.agri-features h2,
+.agri-future h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.agri-problem-solution {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.agri-card {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.agri-card:hover {
+  transform: translateY(-8px);
+}
+
+.agri-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.agri-features li {
+  background: #e8f5e9;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+}
+.agri .agri-future{
+  background: #f1f8e9;
+  padding: 40px 20px;
+  border-radius: 16px;
+}

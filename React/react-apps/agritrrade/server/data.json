@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "389e",
+      "name": "Awnish Kumar",
+      "email": "awnishmmg.a41@gmail.com",
+      "mobile": "8299502081",
+      "password": "123456",
+      "role": "farmer"
+    }
+  ]
+}

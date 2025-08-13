@@ -1,0 +1,232 @@
+/* .index-section>.row{
+    padding: 100px;
+} */
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-primary-custom {
+  background: #153a26;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+}
+
+button{
+  background: #153a26;;
+}
+
+.hero-img .img-placeholder {
+  height: 250px;
+  width: 100%;
+  background-color: #d9e5d1;
+  border-radius: 12px;
+}
+
+
+.feature-box {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.icon-placeholder {
+  width: 50px;
+  height: 50px;
+  background: #d9e5d1;
+  margin: 0 auto 10px;
+  border-radius: 6px;
+}
+
+.how-it-works {
+  margin-top: 50px;
+}
+.step-box {
+  text-align: center;
+}
+.arrow {
+  font-size: 24px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}
+
+.for-section {
+  margin-top: 50px;
+}
+.for-farmers, .for-merchants {
+  padding: 20px;
+  border-radius: 8px;
+}
+.for-farmers {
+  background: #f0f5f0;
+}
+.for-merchants {
+  background: #153a26;
+  color: #fff;
+}
+
+.buttons-row {
+  margin-top: 20px;
+}
+.btn-outline-custom {
+  background: none;
+  border: 1px solid #153a26;
+  color: #153a26;
+  padding: 10px 18px;
+  border-radius: 4px;
+}
+
+/* CSS by Manvi start*/
+body{
+  font-family: Verdana;
+}
+#navbar{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+#logo-box{
+  height: 60px;
+  width: auto;
+}
+#logo{
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+#nav-link{
+  font-size: 1.1rem;
+}
+#navbar-nav{
+  padding: 0px 35px;
+}
+#btn{
+  padding: 6px 10px ;
+  background-color: rgb(11, 104, 11);
+  border: 1px solid gray;
+  
+}
+
+#bars-btn{
+  font-size: 1.2rem;
+  padding: 7px 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.619),
+  inset 1px 1px 2px 0px rgba(142, 141, 141, 0.129),
+  inset 0px 1px 3px 2px rgba(128, 128, 128, 0.409)
+}
+#bars-btn:hover{
+  background-color: rgba(11, 104, 11, 0.862);
+  color: white;
+  transition: all .5s ease-in-out;
+  box-shadow: 1px 1px 3px 0px rgba(210, 208, 208, 0.619),
+  inset 1px 1px 2px 0px rgba(226, 225, 225, 0.129),
+  inset 0px 1px 3px 2px rgba(233, 230, 230, 0.409)
+}
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1040;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  z-index: 1050;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+.mobile-sidebar .nav-link {
+  padding: 10px 0;
+  display: block;
+  color: #333;
+}
+
+.mobile-sidebar .nav-link:hover {
+  color: #0d6efd;
+}
+
+#mobile-sidebar{
+  transition: all .5s ease-in-out;
+}
+
+
+#footer-container{
+  background-color: #333;
+}
+#footer-section{
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#google-map{
+ width: 90%;
+ height: 180px;
+}
+#socialMedia{
+  width: 35px;
+  height: 35px;
+
+  box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.619),
+  inset 1px 1px 2px 0px rgba(142, 141, 141, 0.129),
+  inset 0px 1px 3px 2px rgba(128, 128, 128, 0.409)
+}
+#socialMedia:hover{
+  scale: 1.1;
+  transition: all .5s ease-in-out;
+}
+@media (max-width: 576px) {
+  #footer-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+  #footer-section h4, #footer-section h5 {
+    margin-bottom: 0.5rem;
+  }
+  #footer-section p, #footer-section .small {
+    font-size: 0.85rem;
+  }
+  #AgriConnect{
+    width: 50%;
+  }
+  #quick-links{
+    width: 50%;
+  }
+  #google-map{
+    display: none;
+  }
+}
+
+/* CSS by Manvi end*/
