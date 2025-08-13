@@ -30,7 +30,7 @@ const userApiService = {
   loginFarmer: function (crendentials, gotoDashboard) {
     let api = fetch(
       config.API_HOST_URL +
-        `/users?email="+${crendentials.email}&password=${crendentials.password}`,
+        `/users?email=${crendentials.email}&password=${crendentials.password}`,
       {
         headers: {
           "content-type": "application/json;charset=utf-8",
@@ -45,7 +45,11 @@ const userApiService = {
         }
       })
       .then((data) => {
-        gotoDashboard(data);
+        if (Array.isArray(data) && data.length > 0) {
+          gotoDashboard(data);
+        } else {
+          window.alert("Invalid User Name or Password");
+        }
       })
       .catch((error) => {
         console.log(error);

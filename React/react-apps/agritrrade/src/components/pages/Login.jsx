@@ -60,8 +60,15 @@ const Login = () => {
         password: inputPasswordRef.current.value.trim(),
       };
       userApiService.loginFarmer(crendentials, function (data) {
-        console.log("After Login =>", data);
-        navigate("/farmer-dashboard");
+        if (data.length > 0 && data.length == 1) {
+          if (data[0].role == "farmer") {
+            navigate("/farmer-dashboard");
+          } else if (data[0].role == "merchant") {
+            navigate("/merchant-dashboard");
+          } else if (data[0].role == "admin") {
+            navigate("/admin-dashboard");
+          }
+        }
       });
     }
   }
