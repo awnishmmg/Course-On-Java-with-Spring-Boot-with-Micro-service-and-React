@@ -62,6 +62,18 @@ const Login = () => {
       userApiService.loginFarmer(crendentials, function (data) {
         if (data.length > 0 && data.length == 1) {
           if (data[0].role == "farmer") {
+            const session_data = {
+              id: data[0]?.id,
+              name: data[0]?.name,
+              email: data[0]?.email,
+              role: data[0]?.role,
+            };
+
+            window.localStorage.setItem(
+              "session.data",
+              JSON.stringify(session_data)
+            );
+
             navigate("/farmer-dashboard");
           } else if (data[0].role == "merchant") {
             navigate("/merchant-dashboard");
@@ -75,7 +87,7 @@ const Login = () => {
   return (
     <React.Fragment>
       <h1>Login Here</h1>
-      <form action="#" onSubmit={handleLoginSubmit}>
+      <form action="#">
         <p>
           Enter Email
           <input type="email" id="email" name="email" ref={inputEmailRef} />
@@ -91,7 +103,9 @@ const Login = () => {
           />
           <span ref={errorPassword}></span>
         </p>
-        <button type="submit">Login</button>
+        <button type="button" onClick={handleLoginSubmit}>
+          Login
+        </button>
       </form>
     </React.Fragment>
   );

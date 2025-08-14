@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Login from "./components/pages/Login";
@@ -12,6 +12,8 @@ import Register from "./components/pages/Register";
 
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import Dashboard from "./components/modules/dashboard/farmer/Dashboard";
+import ProtectedRoute from "./helpers/ProtectedRoutes";
 
 function App() {
   return (
@@ -19,13 +21,24 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login message={""} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/farmerreg" element={<FarmerRegistration />} />
         <Route path="/merchantreg" element={<MerchantRegistartion />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+
+        {/* Modules Route start*/}
+        <Route
+          path="/farmer-dashboard"
+          element={
+            <ProtectedRoute endPoint={"/login"} message={"session-expired"}>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        {/* Modules Route End */}
       </Routes>
       <Footer />
     </React.Fragment>
