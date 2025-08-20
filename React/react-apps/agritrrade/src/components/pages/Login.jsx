@@ -66,6 +66,7 @@ const Login = () => {
               id: data[0]?.id,
               name: data[0]?.name,
               email: data[0]?.email,
+              mobile : data[0]?.mobile,
               role: data[0]?.role,
             };
 
@@ -74,11 +75,11 @@ const Login = () => {
               JSON.stringify(session_data)
             );
 
-            navigate("/farmer-dashboard");
+            navigate("/farmer/dashboard");
           } else if (data[0].role == "merchant") {
-            navigate("/merchant-dashboard");
+            navigate("/merchant/dashboard");
           } else if (data[0].role == "admin") {
-            navigate("/admin-dashboard");
+            navigate("/admin/dashboard");
           }
         }
       });

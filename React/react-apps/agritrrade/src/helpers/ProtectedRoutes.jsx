@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate ,Outlet} from "react-router-dom";
 
 const ProtectedRoute = ({ children, endPoint, message }) => {
   const session_data = localStorage.getItem("session.data");
@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children, endPoint, message }) => {
     return <Navigate to={endPoint + "?" + message} replace />;
   }
 
-  return children;
+  return <Outlet/>
 };
 
 export default ProtectedRoute;

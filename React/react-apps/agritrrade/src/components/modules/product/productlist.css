@@ -1,0 +1,30 @@
+/* ProductList.css */
+
+.bg-agriculture {
+  background-color: #4CAF50; /* Agriculture Green */
+}
+
+.btn-agriculture {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.btn-agriculture:hover {
+  background-color: #388E3C;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table .badge {
+  font-size: 0.9em;
+  padding: 5px 10px;
+}
+
+.table-responsive {
+  max-height: 400px;
+  overflow-y: auto;
+}

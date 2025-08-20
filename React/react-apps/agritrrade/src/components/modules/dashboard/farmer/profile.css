@@ -1,0 +1,13 @@
+/* Profile.css */
+.profile-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.card-header {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}

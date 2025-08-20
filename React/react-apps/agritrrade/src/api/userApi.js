@@ -55,6 +55,33 @@ const userApiService = {
         console.log(error);
       });
   },
+  AddProduct: function (productData, productListing) {
+    let api = fetch(config.API_HOST_URL + "/products", {
+      headers: {
+        "content-type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(productData),
+      mode: "cors",
+      method: "POST",
+    });
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        console.log(data);
+        if (data?.id) {
+          window.alert("Product Added Successfully");
+          productListing(data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
+  },
 };
 
 export { userApiService };

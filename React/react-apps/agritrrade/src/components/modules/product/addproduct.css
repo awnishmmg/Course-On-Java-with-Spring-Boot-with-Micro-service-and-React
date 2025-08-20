@@ -1,0 +1,20 @@
+
+
+.add-product-form {
+  max-width: 700px;
+  margin: auto;
+}
+
+.bg-agriculture {
+  background-color: #4CAF50; /* Agriculture green */
+}
+
+.btn-agriculture {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.btn-agriculture:hover {
+  background-color: #388E3C;
+}
