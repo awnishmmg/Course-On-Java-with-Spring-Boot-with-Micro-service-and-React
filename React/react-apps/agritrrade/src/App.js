@@ -17,10 +17,12 @@ import ProtectedRoute from "./helpers/ProtectedRoutes";
 import Profile from "./components/modules/dashboard/farmer/Profile";
 import ProductAdd from "./components/modules/product/ProductAdd";
 import ProductList from "./components/modules/product/ProductList";
+import Toaster from "./components/alerts/Toaster";
 
 function App() {
   return (
     <React.Fragment>
+      <Toaster />
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -33,19 +35,20 @@ function App() {
         <Route path="/services" element={<Services />} />
 
         {/* Modules Route start*/}
-        <Route path="/farmer" element={ 
-          <ProtectedRoute endPoint={"/login"} message={"session-expired"}/>}>
-            <Route path="dashboard" element={<Dashboard/>}/> 
-            <Route path="profile" element={<Profile/>}/>
-            {/* Products Route start */}
-            <Route path="manage-products/list" element={<ProductList/>}/>
-            <Route path="manage-products/add" element={<ProductAdd/>}/>
-            {/* <Route path="manage-products/edit" element={<ProductAdd/>}/> */}
-            {/* Product Route End */}
+        <Route
+          path="/farmer"
+          element={
+            <ProtectedRoute endPoint={"/login"} message={"session-expired"} />
+          }
+        >
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="profile" element={<Profile />} />
+          {/* Products Route start */}
+          <Route path="manage-products/list" element={<ProductList />} />
+          <Route path="manage-products/add" element={<ProductAdd />} />
+          {/* <Route path="manage-products/edit" element={<ProductAdd/>}/> */}
+          {/* Product Route End */}
         </Route>
-
-        
-
 
         {/* Modules Route End */}
       </Routes>

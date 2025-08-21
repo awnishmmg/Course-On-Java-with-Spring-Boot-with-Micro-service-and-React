@@ -2,43 +2,46 @@ import React, { useState } from "react";
 import "./addproduct.css";
 import Header from "../dashboard/farmer/layout/Header";
 import { userApiService } from "../../../api/userApi";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductAdd = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState({
     productName: {
       hasError: false,
       errorMessage: "",
-      value: "wheat",
+      value: "",
       style: "",
     },
     productDescription: {
       hasError: false,
       errorMessage: "",
-      value: "wheat",
+      value: "",
       style: "",
     },
     productCategory: {
       hasError: false,
       errorMessage: "",
-      value: "grains",
+      value: "",
       style: "",
     },
     productQty: {
       hasError: false,
       errorMessage: "",
-      value: 10,
+      value: 0,
       style: "",
     },
     productUnit: {
       hasError: false,
       errorMessage: "",
-      value: "tonne",
+      value: "",
       style: "",
     },
     unitPrice: {
       hasError: false,
       errorMessage: "",
-      value: 20,
+      value: 0,
       style: "",
     },
     isAvailable: {
@@ -100,14 +103,30 @@ const ProductAdd = () => {
   };
 
   function addProduct(e) {
-    userApiService.AddProduct({
-      product_name: products.productName.value,
-      product_description: products.productDescription.value,
-      product_category: products.productCategory.value,
-      product_qty: products.productQty.value,
-      product_unit: products.productUnit.value,
-      product_unit_price: products.unitPrice.value,
-    });
+    userApiService.AddProduct(
+      {
+        product_name: products.productName.value,
+        product_description: products.productDescription.value,
+        product_category: products.productCategory.value,
+        product_qty: products.productQty.value,
+        product_unit: products.productUnit.value,
+        product_unit_price: products.unitPrice.value,
+        product_isAvailable: products.isAvailable.value,
+        fk_farmer_id: JSON.parse(window.localStorage.getItem("session.data"))[
+          "id"
+        ],
+        created_at: new Date().toString(),
+        updated_at: null,
+      },
+      function (data) {
+        if (data != null) {
+          toast.success("Product Created Succesfully");
+          setTimeout(() => {
+            navigate("/farmer/manage-products/list");
+          }, 3000);
+        }
+      }
+    );
   }
 
   console.log("formdata========>", products);

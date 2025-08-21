@@ -9,5 +9,32 @@
       "role": "farmer"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "bba6",
+      "product_name": "Bajra",
+      "product_description": "Bajra",
+      "product_category": "grains",
+      "product_qty": "4",
+      "product_unit": "kg",
+      "product_unit_price": "10",
+      "product_isAvailable": true,
+      "fk_farmer_id": "389e",
+      "created_at": "Wed Aug 20 2025 23:29:45 GMT+0530 (India Standard Time)",
+      "updated_at": null
+    },
+    {
+      "id": "e806",
+      "product_name": "Tea",
+      "product_description": "Assam Tea",
+      "product_category": "beverages",
+      "product_qty": "20",
+      "product_unit": "kg",
+      "product_unit_price": "20",
+      "product_isAvailable": true,
+      "fk_farmer_id": "389e",
+      "created_at": "Thu Aug 21 2025 00:44:21 GMT+0530 (India Standard Time)",
+      "updated_at": null
+    }
+  ]
 }

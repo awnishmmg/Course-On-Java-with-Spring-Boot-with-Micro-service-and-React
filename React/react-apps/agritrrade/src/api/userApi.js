@@ -73,9 +73,57 @@ const userApiService = {
       .then(function (data) {
         console.log(data);
         if (data?.id) {
-          window.alert("Product Added Successfully");
+          // window.alert("Product Added Successfully");
           productListing(data);
         }
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
+  },
+  getFarmerProducts: function (farmer_id, showProducts) {
+    let api = fetch(
+      config.API_HOST_URL + "/products/?fk_farmer_id=" + farmer_id,
+      {
+        headers: {
+          "content-type": "application/json;charset=utf-8",
+        },
+      }
+    );
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        console.log(data);
+        if (Array.isArray(data) && data.length > 0) {
+          showProducts(data);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
+  },
+  deleteProducts: function (product_id, refreshProductList) {
+    let api = fetch(config.API_HOST_URL + "/products/" + product_id, {
+      headers: {
+        "content-type": "application/json;charset=utf-8",
+      },
+      method: "DELETE",
+      mode: "cors",
+    });
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        refreshProductList(data);
       })
       .catch(function (error) {
         console.log(error);
