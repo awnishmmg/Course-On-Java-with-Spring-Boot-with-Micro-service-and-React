@@ -68,6 +68,7 @@ const ProductList = () => {
                 <th>Unit Price</th>
                 <th>In Stock </th>
                 <th>Action</th>
+                <th>Manage Images</th>
               </tr>
             </thead>
             <tbody>
@@ -98,6 +99,18 @@ const ProductList = () => {
                       }}
                     >
                       Delete
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      className="badge bg-success"
+                      onClick={(e) => {
+                        navigate(
+                          "/farmer/manage-products/upload-image/" + product.id
+                        );
+                      }}
+                    >
+                      Manage Image
                     </button>
                   </td>
                 </tr>

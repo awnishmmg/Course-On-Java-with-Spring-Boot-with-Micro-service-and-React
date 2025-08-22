@@ -18,6 +18,7 @@ import Profile from "./components/modules/dashboard/farmer/Profile";
 import ProductAdd from "./components/modules/product/ProductAdd";
 import ProductList from "./components/modules/product/ProductList";
 import Toaster from "./components/alerts/Toaster";
+import ProductImageAdd from "./components/modules/product/ProductImageAdd";
 
 function App() {
   return (
@@ -46,7 +47,10 @@ function App() {
           {/* Products Route start */}
           <Route path="manage-products/list" element={<ProductList />} />
           <Route path="manage-products/add" element={<ProductAdd />} />
-          {/* <Route path="manage-products/edit" element={<ProductAdd/>}/> */}
+          <Route
+            path="manage-products/upload-image/:product_id"
+            element={<ProductImageAdd />}
+          />
           {/* Product Route End */}
         </Route>
 
