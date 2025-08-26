@@ -18,7 +18,11 @@ const Login = () => {
   const navigate = useNavigate();
 
   function handleLoginSubmit(e) {
+    console.log("before");
+
     e.preventDefault();
+    console.log("after");
+    console.log("inputEmailRef.current.value", inputEmailRef.current.value);
 
     //Email Validation
     if (inputEmailRef.current.value.trim() == "") {
@@ -54,6 +58,9 @@ const Login = () => {
       });
     }
     //conditions
+    console.log("isError.email", isError.email);
+    console.log("isError.password", isError.password);
+
     if (isError.email === false && isError.password === false) {
       const crendentials = {
         email: inputEmailRef.current.value.trim(),
@@ -66,7 +73,7 @@ const Login = () => {
               id: data[0]?.id,
               name: data[0]?.name,
               email: data[0]?.email,
-              mobile : data[0]?.mobile,
+              mobile: data[0]?.mobile,
               role: data[0]?.role,
             };
 

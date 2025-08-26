@@ -130,6 +130,32 @@ const userApiService = {
         window.alert("Oops Error Try Later");
       });
   },
+  uploadImage: function (imagesArr, redirectDashboard) {
+    const session_data = JSON.parse(
+      window.localStorage.getItem("session.data")
+    );
+    imagesArr.forEach(async function (base64, index) {
+      try {
+        const response = await fetch(config.API_HOST_URL + "/product_images", {
+          headers: {
+            "content-type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify({
+            image: base64,
+            fk_user_id: session_data.id,
+            fk_role: session_data.role,
+          }),
+          mode: "cors",
+          method: "POST",
+        });
+        // get the response
+        const res = await response.json();
+        redirectDashboard(res, index + 1);
+      } catch (error) {
+        console.log("Error Uploading Images", error);
+      }
+    });
+  },
 };
 
 export { userApiService };

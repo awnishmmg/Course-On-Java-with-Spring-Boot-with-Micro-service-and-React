@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import "./imageadd.css";
 import Header from "../dashboard/farmer/layout/Header";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { userApiService } from "./../../../api/userApi";
+import { useNavigate } from "react-router-dom";
 
 function ProductImageAdd() {
+  const navigate = useNavigate();
   const { product_id } = useParams();
 
   const [images, setImages] = useState([]);
@@ -49,6 +53,24 @@ function ProductImageAdd() {
     setMainImage(img);
   }
 
+  function uploadImages() {
+    if (images.length === 0) {
+      toast.error("Images is Required");
+    }
+
+    if (images.length >= 1 && images.length <= 4) {
+      userApiService.uploadImage(images, function (data, i) {
+        toast.success(`${i} Image Uploaded`);
+      });
+
+      setImages([]);
+      setMainImage([]);
+      setTimeout(function () {
+        navigate("/farmer/manage-products/list");
+      }, 2000);
+    }
+  }
+
   console.log("images", images);
   return (
     <React.Fragment>
@@ -66,7 +88,14 @@ function ProductImageAdd() {
         >
           {images.length > 0 ? (
             <React.Fragment>
-              <button className="btn btn-success">Upload</button>
+              <button
+                className="btn btn-success"
+                onClick={(e) => {
+                  uploadImages();
+                }}
+              >
+                Upload
+              </button>
               <button
                 className="btn btn-danger"
                 onClick={(e) => {
