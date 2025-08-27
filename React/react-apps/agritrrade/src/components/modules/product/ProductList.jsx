@@ -110,7 +110,7 @@ const ProductList = () => {
                         );
                       }}
                     >
-                      Manage Image
+                      Upload Images
                     </button>
                   </td>
                 </tr>

@@ -130,7 +130,7 @@ const userApiService = {
         window.alert("Oops Error Try Later");
       });
   },
-  uploadImage: function (imagesArr, redirectDashboard) {
+  uploadImage: function (product_id, imagesArr, updateProductStatus) {
     const session_data = JSON.parse(
       window.localStorage.getItem("session.data")
     );
@@ -141,6 +141,7 @@ const userApiService = {
             "content-type": "application/json;charset=utf-8",
           },
           body: JSON.stringify({
+            fk_product_id: product_id,
             image: base64,
             fk_user_id: session_data.id,
             fk_role: session_data.role,
@@ -150,11 +151,36 @@ const userApiService = {
         });
         // get the response
         const res = await response.json();
-        redirectDashboard(res, index + 1);
+        updateProductStatus(res, index + 1);
       } catch (error) {
         console.log("Error Uploading Images", error);
       }
     });
+  },
+  updateProductImageStatus: function (product_id, redirectDashboard) {
+    let api = fetch(config.API_HOST_URL + "/products/" + product_id, {
+      headers: {
+        "content-type": "application/json;charset=utf-8",
+      },
+      method: "PATCH",
+      mode: "cors",
+      body: JSON.stringify({
+        is_image_uploaded: true,
+      }),
+    });
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        redirectDashboard(data);
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
   },
 };
 

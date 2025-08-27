@@ -117,6 +117,7 @@ const ProductAdd = () => {
         ],
         created_at: new Date().toString(),
         updated_at: null,
+        is_image_uploaded: false,
       },
       function (data) {
         if (data != null) {

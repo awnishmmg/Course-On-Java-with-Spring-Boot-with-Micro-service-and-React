@@ -59,15 +59,17 @@ function ProductImageAdd() {
     }
 
     if (images.length >= 1 && images.length <= 4) {
-      userApiService.uploadImage(images, function (data, i) {
+      userApiService.uploadImage(product_id, images, function (data, i) {
         toast.success(`${i} Image Uploaded`);
-      });
 
-      setImages([]);
-      setMainImage([]);
-      setTimeout(function () {
-        navigate("/farmer/manage-products/list");
-      }, 2000);
+        userApiService.updateProductImageStatus(product_id, function (data) {
+          setImages([]);
+          setMainImage([]);
+          setTimeout(function () {
+            navigate("/farmer/manage-products/list");
+          }, 2000);
+        });
+      });
     }
   }
 
