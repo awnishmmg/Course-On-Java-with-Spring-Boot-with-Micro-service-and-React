@@ -6,9 +6,15 @@ import Header from "../dashboard/farmer/layout/Header";
 import { useNavigate } from "react-router-dom";
 import { userApiService } from "../../../api/userApi";
 import { toast } from "react-toastify";
+import ModalContainer from "../../modals/ModalContainer";
+import ShowImages from "./ShowImages";
+
 const ProductList = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [isEnable, setEnable] = useState(false);
+
+  const [imagesArr, setImageArr] = useState([]);
 
   useEffect(function () {
     const farmer_id = JSON.parse(window.localStorage.getItem("session.data"))[
@@ -39,9 +45,30 @@ const ProductList = () => {
     }
   }
 
+  function getUploadedImages(product_id) {
+    userApiService.getUploadImages(
+      product_id,
+      function (ImagesData) {
+        setImageArr(ImagesData);
+      },
+      function () {
+        toast.error("No Images Found");
+      }
+    );
+  }
+
   return (
     <React.Fragment>
       <Header />
+      <ModalContainer
+        modalTitle={"Product Images"}
+        modalBody={<ShowImages imagesArr={imagesArr} />}
+        closeTitle={"close"}
+        enableSuccessButton={false}
+        successTitle={"exit"}
+        checkEnable={isEnable}
+        setBtnEnable={setEnable}
+      />
       <div className="container mt-5">
         <div className="d-flex justify-content-between mb-3">
           <h4>Product List</h4>
@@ -112,6 +139,19 @@ const ProductList = () => {
                     >
                       Upload Images
                     </button>
+                    {product.is_image_uploaded ? (
+                      <button
+                        className="badge bg-success"
+                        onClick={(e) => {
+                          setEnable(true);
+                          getUploadedImages(product.id);
+                        }}
+                      >
+                        View Images
+                      </button>
+                    ) : (
+                      ""
+                    )}
                   </td>
                 </tr>
               ))}
@@ -122,5 +162,4 @@ const ProductList = () => {
     </React.Fragment>
   );
 };
-
 export default ProductList;

@@ -182,6 +182,33 @@ const userApiService = {
         window.alert("Oops Error Try Later");
       });
   },
+  getUploadImages: function (product_id, setImageInArray, raiseErrorInToast) {
+    let api = fetch(
+      config.API_HOST_URL + "/product_images/?fk_product_id=" + product_id,
+      {
+        headers: {
+          "content-type": "application/json;charset=utf-8",
+        },
+      }
+    );
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        if (data.length > 0) {
+          setImageInArray(data);
+        } else if (data.length === 0) {
+          raiseErrorInToast();
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
+  },
 };
 
 export { userApiService };
