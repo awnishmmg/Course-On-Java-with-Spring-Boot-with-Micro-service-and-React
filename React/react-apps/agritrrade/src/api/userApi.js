@@ -209,6 +209,28 @@ const userApiService = {
         window.alert("Oops Error Try Later");
       });
   },
+  deleteUploadImage: function (image_id, refreshImages) {
+    let api = fetch(config.API_HOST_URL + "/product_images/" + image_id, {
+      headers: {
+        "content-type": "application/json;charset=utf-8",
+      },
+      method: "DELETE",
+      mode: "cors",
+    });
+    api
+      .then(function (res) {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then(function (data) {
+        refreshImages();
+      })
+      .catch(function (error) {
+        console.log(error);
+        window.alert("Oops Error Try Later");
+      });
+  },
 };
 
 export { userApiService };
