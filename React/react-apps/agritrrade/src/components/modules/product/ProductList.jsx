@@ -49,10 +49,13 @@ const ProductList = () => {
     userApiService.getUploadImages(
       product_id,
       function (ImagesData) {
+        setEnable(true);
         setImageArr(ImagesData);
       },
       function () {
         toast.error("No Images Found");
+        setEnable(false);
+        setImageArr([]);
       }
     );
   }
@@ -143,7 +146,6 @@ const ProductList = () => {
                       <button
                         className="badge bg-success"
                         onClick={(e) => {
-                          setEnable(true);
                           getUploadedImages(product.id);
                         }}
                       >

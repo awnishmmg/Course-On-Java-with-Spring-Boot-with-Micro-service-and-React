@@ -3,13 +3,19 @@ import { userApiService } from "../../../api/userApi";
 import { toast } from "react-toastify";
 
 function ShowImages({ imagesArr }) {
-  const [imageList, setImageList] = useState(imagesArr);
+  const [imageList, setImageList] = useState([]);
+
+  useEffect(() => {
+    setImageList(imagesArr);
+  }, [imagesArr]);
+
+  console.log(imagesArr);
 
   //delete Logic of the Image
   function deleteUploadImage(image_id, index, fk_product_id) {
     const st = window.confirm("Do you really want to Delete");
     if (st) {
-      const updateImages = imagesArr.filter(function (item) {
+      const updateImages = imageList.filter(function (item) {
         return image_id !== item.id;
       });
       setImageList(updateImages);
@@ -30,6 +36,8 @@ function ShowImages({ imagesArr }) {
     }
   }
 
+  console.log("state =>", imagesArr);
+  console.log("state =>", imageList);
   return (
     <React.Fragment>
       {imageList.map(function (item, index) {

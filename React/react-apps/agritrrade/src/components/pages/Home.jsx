@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/style.css"; // custom styles
 
+const ProductData = ["A", "B", "C", "D"];
+
 export default function Home() {
   return (
     <div className="container-fluid index-section mt-4">
@@ -23,36 +25,19 @@ export default function Home() {
 
       {/* Features */}
       <div className="container features">
-        <h3>Features</h3>
+        <h3>Top Products</h3>
         <div className="row mt-5">
-          <div className="col-sm">
-            <div className="col-sm feature-box">
-              <div className="icon-placeholder"></div>
-              <h5>Lorem, ipsum.</h5>
-              <p>Direct connection</p>
-            </div>
-          </div>
-          <div className="col-sm">
-            <div className="col-sm feature-box">
-              <div className="icon-placeholder"></div>
-              <h5>Lorem, ipsum.</h5>
-              <p>Direct connection</p>
-            </div>
-          </div>
-          <div className="col-sm">
-            <div className="col-sm feature-box">
-              <div className="icon-placeholder"></div>
-              <h5>Lorem, ipsum.</h5>
-              <p>Direct connection</p>
-            </div>
-          </div>
-          <div className="col-sm">
-            <div className="col-sm feature-box">
-              <div className="icon-placeholder"></div>
-              <h5>Lorem, ipsum.</h5>
-              <p>Direct connection</p>
-            </div>
-          </div>
+          {ProductData.map(function (item, index) {
+            return (
+              <div className="col-sm">
+                <div className="col-sm feature-box">
+                  <div className="icon-placeholder"></div>
+                  <h5>Lorem, ipsum.</h5>
+                  <p>Direct connection</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
