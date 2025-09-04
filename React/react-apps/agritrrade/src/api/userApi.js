@@ -231,6 +231,36 @@ const userApiService = {
         window.alert("Oops Error Try Later");
       });
   },
+  getAllProductsWithImages: async function (productListing) {
+    try {
+      const [resProducts, resImages] = await Promise.all([
+        fetch(config.API_HOST_URL + "/products"),
+        fetch(config.API_HOST_URL + "/product_images"),
+      ]);
+
+      const [products, productImages] = await Promise.all([
+        resProducts.json(),
+        resImages.json(),
+      ]);
+
+      const merged = products.map(function (product, index) {
+        const imgObject = productImages.find(
+          (img) => img.fk_product_id === product.id
+        );
+
+        return {
+          ...product,
+          image: imgObject ? imgObject.image : null,
+        };
+      });
+
+      console.log("merged data", merged);
+      productListing(merged);
+    } catch (error) {
+      console.log(error);
+      productListing([]);
+    }
+  },
 };
 
 export { userApiService };

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../css/style.css"; // custom styles
-
-const ProductData = ["A", "B", "C", "D"];
+import { userApiService } from "../../api/userApi";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(function () {
+    userApiService.getAllProductsWithImages(function (products) {
+      setProducts(products);
+    });
+  }, []);
+
   return (
     <div className="container-fluid index-section mt-4">
       {/* revolution section */}
@@ -27,17 +35,9 @@ export default function Home() {
       <div className="container features">
         <h3>Top Products</h3>
         <div className="row mt-5">
-          {ProductData.map(function (item, index) {
-            return (
-              <div className="col-sm">
-                <div className="col-sm feature-box">
-                  <div className="icon-placeholder"></div>
-                  <h5>Lorem, ipsum.</h5>
-                  <p>Direct connection</p>
-                </div>
-              </div>
-            );
-          })}
+          {products.map((product, idx) => (
+            <ProductCard key={idx} product={product} />
+          ))}
         </div>
       </div>
 
@@ -103,3 +103,33 @@ export default function Home() {
     </div>
   );
 }
+
+const ProductCard = ({ product }) => (
+  <div className="col-md-6 mb-4">
+    <div className="d-flex border rounded p-3">
+      <img
+        src={product.image}
+        alt={product.product_name}
+        className="me-3"
+        style={{ width: "100px", height: "100px", objectFit: "cover" }}
+      />
+      <div>
+        <NavLink to={`/products/more-info/${product.id}`}>
+          <h5>{product.product_name}</h5>
+        </NavLink>
+        <p>{product.product_description}</p>
+        <p>{product.product_category}</p>
+        <p>
+          <strong>Price:</strong> ₹{product.product_unit_price} /
+          {product.product_unit} <br />
+          <strong>minimum Order Qty </strong> :{product.product_qty} /{" "}
+          {product.product_unit}
+        </p>
+        <div>
+          <button className="btn btn-primary btn-sm me-2">Get Quotes</button>
+          <button className="btn btn-danger btn-sm">Farmer Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+);
